@@ -12,15 +12,11 @@ public class ToDoNode {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private int importance;
-    private int urgency;
+    private int priority;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public ToDoNode(String name, int priority) {
         this.name = name;
+        this.priority = priority;
     }
 
     public Long getId() {
@@ -31,23 +27,19 @@ public class ToDoNode {
         this.id = id;
     }
 
-    public int getImportance() {
-        return importance;
+    public String getName() {
+        return name;
     }
 
-    public void setImportance(int importance) {
-        this.importance = importance;
-    }
-
-    public int getUrgency() {
-        return urgency;
-    }
-
-    public void setUrgency(int urgency) {
-        this.urgency = urgency;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getPriority() {
-        return urgency*importance;
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
     }
 }
