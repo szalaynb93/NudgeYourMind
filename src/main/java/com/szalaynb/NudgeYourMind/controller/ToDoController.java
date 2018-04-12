@@ -34,7 +34,8 @@ public class ToDoController {
 
     @PostMapping(value = "/delete_todo")
     public @ResponseBody
-    void deleteLineItem(@RequestParam Map<String, String> queryParameters) throws InterruptedException {
+    void deleteLineItem(@RequestParam Map<String, String> queryParameters) {
         Long todoId = Long.parseLong(queryParameters.get("toDoId"), 10);
         toDoNodeService.deleteToDoNode(todoId);
-    }}
+    }
+}
