@@ -10,7 +10,7 @@ public class ToDoNode {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
     private String name;
     private int priority;
 
@@ -19,11 +19,11 @@ public class ToDoNode {
         this.priority = priority;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
