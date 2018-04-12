@@ -10,14 +10,22 @@ import java.util.List;
 @Service
 public class ToDoNodeService {
 
+    private final ToDoNodeRepository toDoNodeRepository;
+
     @Autowired
-    ToDoNodeRepository toDoNodeRepository;
+    public ToDoNodeService(ToDoNodeRepository toDoNodeRepository) {
+        this.toDoNodeRepository = toDoNodeRepository;
+    }
 
     public List<ToDoNode> findAll() {
         return toDoNodeRepository.findAll();
     }
 
-    public ToDoNode saveToDoNode(ToDoNode toDoNode) {
-        return toDoNodeRepository.save(toDoNode);
+    public void saveToDoNode(ToDoNode toDoNode) {
+        toDoNodeRepository.save(toDoNode);
+    }
+
+    public void deleteToDoNode(Long id) {
+        toDoNodeRepository.deleteById(id);
     }
 }

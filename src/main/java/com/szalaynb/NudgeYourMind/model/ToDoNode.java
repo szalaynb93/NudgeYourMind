@@ -14,9 +14,11 @@ public class ToDoNode {
     private String name;
     private int priority;
 
-    public ToDoNode(String name, int priority) {
+    public ToDoNode() {
+    }
+
+    public ToDoNode(String name) {
         this.name = name;
-        this.priority = priority;
     }
 
     public long getId() {

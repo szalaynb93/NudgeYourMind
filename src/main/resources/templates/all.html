@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>All</title>
+</head>
+<body>
+    <h1>All ToDos</h1>
+    <form action="/add_todo" method="post">
+        ToDo Name:
+        <input type="text" name="todo_name" required>
+        <button type="submit" required>Add</button>
+    </form>
+    <table>
+        <tr>
+            <td><h4>ToDo</h4></td>
+        </tr>
+        <tr th:each="todo: ${todolist}">
+            <td th:text="${todo.getName()}">thing 1</td>
+        </tr>
+    </table>
+</body>
+</html>
