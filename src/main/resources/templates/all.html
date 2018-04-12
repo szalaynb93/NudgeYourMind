@@ -16,7 +16,7 @@
             <td><h4>ToDo</h4></td>
         </tr>
         <tr th:each="todo: ${todolist}">
-            <td th:text="${todo.getName()}">thing 1</td>
+            <td th:text="${todo.getName()}">thing 1 <a th:onclick="'deleteToDo(' + ${todo.getId()} + ')'" href="#">X</a></td>
         </tr>
     </table>
 </body>
