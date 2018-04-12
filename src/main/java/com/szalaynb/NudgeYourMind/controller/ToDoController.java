@@ -30,4 +30,6 @@ public class ToDoController {
         toDoNodeService.saveToDoNode(toDoNode);
         return "redirect:/all";
     }
+
+    //TODO delete mapping
 }
