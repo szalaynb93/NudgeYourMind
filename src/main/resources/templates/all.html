@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <title>All</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/all.js" defer></script>
 </head>
 <body>
     <h1>All ToDos</h1>
@@ -15,8 +17,10 @@
         <tr>
             <td><h4>ToDo</h4></td>
         </tr>
-        <tr th:each="todo: ${todolist}">
-            <td th:text="${todo.getName()}">thing 1 <a th:onclick="'deleteToDo(' + ${todo.getId()} + ')'" href="#">X</a></td>
+        <tr th:each="todo: ${todolist}" th:id="todo+${todo.getId()}">
+            <td th:text="${todo.getName()}">thing 1</td>
+            <td><button th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
+
         </tr>
     </table>
 </body>

@@ -4,11 +4,11 @@ function deleteToDo(id) {
         type: 'POST',
         data: {"toDoId" : id},
         success: function (data) {
-            console.log("LineItem deleted. Data: " + data.responseText);
-            $("#cartItem" + id).remove();
+            $("#todo" + id).remove();
+            console.log("ToDo Deleted: " + data.responseText);
         },
         error: function (data) {
-            console.log("LineItem deletion ERROR. Data: " + data.responseText);
+            console.log("ToDo deletion ERROR. Data: " + data.responseText);
         }
     })
 }

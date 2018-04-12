@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Map;
 
@@ -31,5 +32,9 @@ public class ToDoController {
         return "redirect:/all";
     }
 
-    //TODO delete mapping
-}
+    @PostMapping(value = "/delete_todo")
+    public @ResponseBody
+    void deleteLineItem(@RequestParam Map<String, String> queryParameters) throws InterruptedException {
+        Long todoId = Long.parseLong(queryParameters.get("toDoId"), 10);
+        toDoNodeService.deleteToDoNode(todoId);
+    }}
