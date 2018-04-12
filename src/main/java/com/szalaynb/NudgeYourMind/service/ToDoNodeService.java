@@ -16,4 +16,8 @@ public class ToDoNodeService {
     public List<ToDoNode> findAll() {
         return toDoNodeRepository.findAll();
     }
+
+    public ToDoNode saveToDoNode(ToDoNode toDoNode) {
+        return toDoNodeRepository.save(toDoNode);
+    }
 }
