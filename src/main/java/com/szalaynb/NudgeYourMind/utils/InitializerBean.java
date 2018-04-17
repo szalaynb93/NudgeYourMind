@@ -15,5 +15,7 @@ public class InitializerBean {
         toDoNodeService.saveToDoNode(new ToDoNode("Bridge from standing"));
         toDoNodeService.saveToDoNode(new ToDoNode("Eat protein"));
         toDoNodeService.saveToDoNode(new ToDoNode("Sleep"));
+
+        //TODO Add project "incoming"
     }
 }

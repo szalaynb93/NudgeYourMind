@@ -1,5 +1,7 @@
 package com.szalaynb.NudgeYourMind.service;
 
+import com.szalaynb.NudgeYourMind.model.Priority;
+import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
 import com.szalaynb.NudgeYourMind.repository.ToDoNodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ToDoNodeService {
+public class ToDoNodeService implements ToDoNodeServiceRequirements {
 
     private final ToDoNodeRepository toDoNodeRepository;
 
@@ -27,5 +29,18 @@ public class ToDoNodeService {
 
     public void deleteToDoNode(Long id) {
         toDoNodeRepository.deleteById(id);
+    }
+
+    @Override
+    public List<ToDoNode> findByPriority(Priority priority) {
+        return null;
+        //TODO create repo and functionality
+    }
+
+    @Override
+    public List<ToDoNode> findByProject(Project project) {
+        return null;
+        //TODO create repo and functionality
+
     }
 }

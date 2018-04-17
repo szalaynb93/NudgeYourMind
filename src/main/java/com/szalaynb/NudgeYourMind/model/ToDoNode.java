@@ -1,6 +1,9 @@
 package com.szalaynb.NudgeYourMind.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class ToDoNode {
@@ -9,13 +12,25 @@ public class ToDoNode {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private int priority;
+    private Priority priority;
+    private Project project;
 
     public ToDoNode() {
+
     }
+
+    //TODO Create constructor with priority and project incoming for default
 
     public ToDoNode(String name) {
         this.name = name;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     public long getId() {
@@ -34,11 +49,11 @@ public class ToDoNode {
         this.name = name;
     }
 
-    public int getPriority() {
+    public Priority getPriority() {
         return priority;
     }
 
-    public void setPriority(int priority) {
+    public void setPriority(Priority priority) {
         this.priority = priority;
     }
 }
