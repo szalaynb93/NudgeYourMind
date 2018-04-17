@@ -1,9 +1,8 @@
 package com.szalaynb.NudgeYourMind.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.szalaynb.NudgeYourMind.model.enums.Color;
+
+import javax.persistence.*;
 
 @Entity
 public class Project {
@@ -12,6 +11,7 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    @Enumerated
     private Color color;
 
     public Project(String name) {

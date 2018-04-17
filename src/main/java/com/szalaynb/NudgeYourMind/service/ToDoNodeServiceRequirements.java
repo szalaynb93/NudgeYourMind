@@ -1,6 +1,6 @@
 package com.szalaynb.NudgeYourMind.service;
 
-import com.szalaynb.NudgeYourMind.model.Priority;
+import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
 

@@ -1,6 +1,6 @@
 package com.szalaynb.NudgeYourMind.service;
 
-import com.szalaynb.NudgeYourMind.model.Priority;
+import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
 import com.szalaynb.NudgeYourMind.repository.ToDoNodeRepository;
@@ -29,6 +29,10 @@ public class ToDoNodeService implements ToDoNodeServiceRequirements {
 
     public void deleteToDoNode(Long id) {
         toDoNodeRepository.deleteById(id);
+    }
+
+    public boolean isToDoCountZero() {
+        return toDoNodeRepository.count() == 0;
     }
 
     @Override

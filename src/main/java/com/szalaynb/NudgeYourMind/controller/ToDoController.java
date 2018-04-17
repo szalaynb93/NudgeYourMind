@@ -1,6 +1,7 @@
 package com.szalaynb.NudgeYourMind.controller;
 
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
+import com.szalaynb.NudgeYourMind.service.ProjectService;
 import com.szalaynb.NudgeYourMind.service.ToDoNodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,9 @@ public class ToDoController {
 
     @Autowired
     ToDoNodeService toDoNodeService;
+
+    @Autowired
+    ProjectService projectService;
 
     @GetMapping(value = "/all")
     public String renderEvents(Model model) {
