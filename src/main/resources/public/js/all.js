@@ -5,6 +5,7 @@ function deleteToDo(id) {
         data: {"toDoId" : id},
         success: function (data) {
             $("#todo" + id).remove();
+            alert("ToDo deleted.")
             console.log("ToDo Deleted: " + data.responseText);
         },
         error: function (data) {
