@@ -3,6 +3,7 @@ package com.szalaynb.NudgeYourMind.utils;
 import com.szalaynb.NudgeYourMind.model.enums.Color;
 import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
+import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.service.ProjectService;
 import com.szalaynb.NudgeYourMind.service.ToDoNodeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,15 +24,25 @@ public class InitializerBean {
     public void init() {
 
         if (projectService.isProjectCountZero()) {
-            projectService.saveProject(new Project("Incoming", Color.WHITE));
+            projectService.saveProject(new Project("Sport"));
         }
 
+        Project sport = projectService.findById(0L);
+
         if (toDoNodeService.isToDoCountZero()) {
-            toDoNodeService.saveToDoNode(new ToDoNode("Run"));
-            toDoNodeService.saveToDoNode(new ToDoNode("Handstand pushup"));
-            toDoNodeService.saveToDoNode(new ToDoNode("Bridge from standing"));
-            toDoNodeService.saveToDoNode(new ToDoNode("Eat protein"));
-            toDoNodeService.saveToDoNode(new ToDoNode("Sleep"));
+            toDoNodeService.saveToDoNode(new ToDoNode(
+                    "Bridge",false,30, Priority.P2, sport));
+            toDoNodeService.saveToDoNode(new ToDoNode(
+                    "One handed push up",false,30, Priority.P2, sport));
+            toDoNodeService.saveToDoNode(new ToDoNode(
+                    "Handstand pushup",false,30, Priority.P2, sport));
+            toDoNodeService.saveToDoNode(new ToDoNode(
+                    "Squats",false,30, Priority.P2, sport));
+            toDoNodeService.saveToDoNode(new ToDoNode(
+                    "Deadlift",false,30, Priority.P2, sport));
+            toDoNodeService.saveToDoNode(new ToDoNode(
+                    "Pull up",false,30, Priority.P2, sport));
+
         }
     }
 }

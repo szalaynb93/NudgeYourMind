@@ -18,15 +18,14 @@ public class ProjectService implements ProjectServiceRequirements {
         this.projectRepository = projectRepository;
     }
 
-
     @Override
     public List<Project> findAll() {
         return projectRepository.findAll();
     }
 
     @Override
-    public Optional<Project> findById(Long id) {
-        return projectRepository.findById(id);
+    public Project findById(Long id) {
+        return projectRepository.findById(id).get();
     }
 
     @Override

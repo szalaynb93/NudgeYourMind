@@ -47,6 +47,4 @@ public class ToDoNodeService implements ToDoNodeServiceRequirements {
         //TODO create repo and functionality
 
     }
-
-    public List<ToDoNode>
 }

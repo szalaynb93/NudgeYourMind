@@ -8,6 +8,6 @@ import java.util.Optional;
 public interface ProjectServiceRequirements {
 
     List<Project> findAll();
-    Optional<Project> findById(Long id);
+    Project findById(Long id);
     void saveProject(Project project);
 }

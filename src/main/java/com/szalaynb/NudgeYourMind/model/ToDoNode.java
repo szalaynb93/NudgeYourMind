@@ -18,6 +18,7 @@ public class ToDoNode {
     private int duration;
     @Enumerated
     private Priority priority = Priority.P0;
+
     @ManyToOne
     private Project project;
 
