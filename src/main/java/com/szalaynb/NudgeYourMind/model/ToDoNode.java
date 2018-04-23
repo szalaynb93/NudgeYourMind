@@ -13,9 +13,11 @@ public class ToDoNode {
 
     private String name;
 
+    private boolean isUrgent;
+
+    private int duration;
     @Enumerated
     private Priority priority = Priority.P0;
-
     @ManyToOne
     private Project project;
 
@@ -32,10 +34,28 @@ public class ToDoNode {
         this.project = project;
     }
 
-    public ToDoNode(String name, Priority priority, Project project) {
+    public ToDoNode(String name, boolean isUrgent, int duration, Priority priority, Project project) {
         this.name = name;
+        this.isUrgent = isUrgent;
+        this.duration = duration;
         this.priority = priority;
         this.project = project;
+    }
+
+    public boolean isUrgent() {
+        return isUrgent;
+    }
+
+    public void setUrgent(boolean urgent) {
+        isUrgent = urgent;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     public Project getProject() {
