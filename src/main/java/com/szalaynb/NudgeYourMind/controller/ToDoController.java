@@ -1,6 +1,8 @@
 package com.szalaynb.NudgeYourMind.controller;
 
+import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
+import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.service.ProjectService;
 import com.szalaynb.NudgeYourMind.service.ToDoNodeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +27,20 @@ public class ToDoController {
     @GetMapping(value = "/all")
     public String renderEvents(Model model) {
         model.addAttribute("todolist", toDoNodeService.findAll());
+        model.addAttribute("projects", projectService.findAll());
         return "all";
     }
 
 
     @PostMapping(value = "/add_todo")
     public String saveToDo(@RequestParam Map<String, String> queryParameters) {
-        ToDoNode toDoNode = new ToDoNode(queryParameters.get("todo_name"));
+        String name = queryParameters.get("todo_name");
+        boolean urgency = Boolean.getBoolean(queryParameters.get("todo_urgency"));
+        int duration = Integer.parseInt(queryParameters.get("todo_duration"));
+        Priority priority = Priority.valueOf(queryParameters.get("todo_priority"));
+        Project project = projectService.findById(Long.parseLong(queryParameters.get("todo_project")));
+
+        ToDoNode toDoNode = new ToDoNode(name, urgency, duration, priority, project);
         toDoNodeService.saveToDoNode(toDoNode);
         return "redirect:/all";
     }

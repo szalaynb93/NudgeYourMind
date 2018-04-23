@@ -9,16 +9,47 @@
 <body>
     <h1>All ToDos</h1>
     <form action="/add_todo" method="post">
-        ToDo Name:
+        What you want to do?
         <input type="text" name="todo_name" required>
-        <button type="submit" required>Add</button>
+        <br>
+        Is it urgent?
+        <select name="todo_urgency">
+            <option value="true">Yes</option>
+            <option value="false" selected>No</option>
+        </select>
+        <br>
+        How many minutes is it about?
+        <input type="number" name="todo_duration" required>
+        <br>
+        How important is it?
+        <select name="todo_priority">
+            <option value="P0" selected>No Priority</option>
+            <option value="P1">Low Priority</option>
+            <option value="P2">Medium Priority</option>
+            <option value="P3">High Priority</option>
+        </select>
+        <br>
+        Which project it belongs to?
+        <select name="todo_project">
+            <option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name}"></option>
+        </select>
+        <br>
+        <button type="submit">Add ToDo</button>
     </form>
     <table>
         <tr>
             <td><h4>ToDo</h4></td>
+            <td><h4>Urgent</h4></td>
+            <td><h4>Duration(min)</h4></td>
+            <td><h4>Priority</h4></td>
+            <td><h4>Project</h4></td>
         </tr>
         <tr th:each="todo: ${todolist}" th:id="todo+${todo.getId()}">
             <td th:text="${todo.getName()}">thing 1</td>
+            <td th:text="${todo.isUrgent()}">urgency</td>
+            <td th:text="${todo.getDuration()}">10</td>
+            <td th:text="${todo.getPriority()}">P0</td>
+            <td th:text="${todo.getProject().getName()}">project1</td>
             <td><button th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
 
         </tr>
