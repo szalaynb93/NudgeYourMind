@@ -27,7 +27,7 @@ public class InitializerBean {
             projectService.saveProject(new Project("Sport"));
         }
 
-        Project sport = projectService.findById(0L);
+        Project sport = projectService.findById(1L);
 
         if (toDoNodeService.isToDoCountZero()) {
             toDoNodeService.saveToDoNode(new ToDoNode(

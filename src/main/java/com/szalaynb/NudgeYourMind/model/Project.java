@@ -10,21 +10,24 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "project")
     private List<ToDoNode> toDoNodeList;
+
+    public Project() {
+    }
+
+    public Project(String name) {
+        this.name = name;
+    }
 
     public List<ToDoNode> getToDoNodeList() {
         return toDoNodeList;
     }
-
-    public void setToDoNodeList(List<ToDoNode> toDoNodeList) {
-        this.toDoNodeList = toDoNodeList;
-    }
     //@Enumerated
     //private Color color;
 
-    public Project(String name) {
-        this.name = name;
+    public void setToDoNodeList(List<ToDoNode> toDoNodeList) {
+        this.toDoNodeList = toDoNodeList;
     }
 
 //    public Project(String name, Color color) {
