@@ -31,6 +31,13 @@ public class ToDoController {
         return "all";
     }
 
+    @PostMapping(value = "/add_project")
+    public String saveProject(@RequestParam Map<String, String> queryParameters) {
+        String name = queryParameters.get("project_name");
+        Project project = new Project(name);
+        projectService.saveProject(project);
+        return "redirect:/all";
+    }
 
     @PostMapping(value = "/add_todo")
     public String saveToDo(@RequestParam Map<String, String> queryParameters) {
@@ -51,4 +58,6 @@ public class ToDoController {
         Long todoId = Long.parseLong(queryParameters.get("toDoId"), 10);
         toDoNodeService.deleteToDoNode(todoId);
     }
+
+
 }
