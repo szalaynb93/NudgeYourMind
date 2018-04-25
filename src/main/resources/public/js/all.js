@@ -13,6 +13,9 @@ function deleteToDo(id) {
     })
 }
 
+
+
+
 const NTDB = document.querySelector("#newToDoBtn");
 const CNTDB = document.querySelector("#closeToDoCreation");
 const NTDDIV = document.querySelector("#newToDoDiv");
@@ -31,6 +34,10 @@ function unrevealNewToDo() {
 
 NTDB.onclick = revealNewToDo;
 CNTDB.onclick = unrevealNewToDo;
+
+
+
+
 
 const NPB = document.querySelector("#newProjectBtn");
 const CNPB = document.querySelector("#closeProjectCreation");
@@ -51,3 +58,23 @@ function unrevealNewProject() {
 NPB.onclick = revealNewProject;
 CNPB.onclick = unrevealNewProject;
 
+
+
+const ATDB = document.querySelector("#AllToDoBtn");
+const APB = document.querySelector("#AllProjectsBtn");
+const ATDDIV = document.querySelector("#allToDoDiv");
+const APDIV = document.querySelector("#allProjectsDiv");
+
+
+function todoView() {
+    APDIV.classList.add("hide");
+    ATDDIV.classList.remove("hide");
+}
+
+function projectView() {
+    APDIV.classList.remove("hide");
+    ATDDIV.classList.add("hide");
+}
+
+ATDB.onclick = todoView;
+APB.onclick = projectView;

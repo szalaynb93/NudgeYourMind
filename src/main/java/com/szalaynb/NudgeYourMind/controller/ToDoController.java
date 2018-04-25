@@ -25,10 +25,17 @@ public class ToDoController {
     ProjectService projectService;
 
     @GetMapping(value = "/all")
-    public String renderEvents(Model model) {
+    public String renderAllToDo(Model model) {
         model.addAttribute("todolist", toDoNodeService.findAll());
         model.addAttribute("projects", projectService.findAll());
         return "all";
+    }
+
+    @GetMapping(value = "/projects")
+    public String renderProjects(Model model) {
+        model.addAttribute("projects", projectService.findAll());
+        model.addAttribute("todos", toDoNodeService.findAll());
+        return "projects";
     }
 
     @PostMapping(value = "/add_project")
