@@ -5,6 +5,8 @@ function deleteToDo(id) {
         data: {"toDoId" : id},
         success: function (data) {
             $("#todo" + id).remove();
+            $("#ptodo" + id).remove();
+
             console.log("ToDo Deleted: " + data.responseText);
         },
         error: function (data) {
@@ -13,7 +15,20 @@ function deleteToDo(id) {
     })
 }
 
-
+function deleteProject(id) {
+    $.ajax({
+        url: '/delete_project',
+        type: 'POST',
+        data: {"projectId" : id},
+        success: function (data) {
+            $("#project" + id).remove();
+            console.log("Project Deleted: " + data.responseText);
+        },
+        error: function (data) {
+            console.log("Project deletion ERROR. Data: " + data.responseText);
+        }
+    })
+}
 
 
 const NTDB = document.querySelector("#newToDoBtn");

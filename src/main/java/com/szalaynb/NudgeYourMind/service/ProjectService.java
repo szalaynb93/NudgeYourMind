@@ -33,6 +33,10 @@ public class ProjectService implements ProjectServiceRequirements {
         projectRepository.save(project);
     }
 
+    public void deleteProject(Long id) {
+        projectRepository.deleteById(id);
+    }
+
     public boolean isProjectCountZero() {
         return projectRepository.count() == 0;
     }

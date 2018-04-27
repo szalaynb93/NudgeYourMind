@@ -7,6 +7,7 @@ import com.szalaynb.NudgeYourMind.service.ProjectService;
 import com.szalaynb.NudgeYourMind.service.ToDoNodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,7 +54,6 @@ public class ToDoController {
         int duration = Integer.parseInt(queryParameters.get("todo_duration"));
         Priority priority = Priority.valueOf(queryParameters.get("todo_priority"));
         Project project = projectService.findById(Long.parseLong(queryParameters.get("todo_project")));
-
         ToDoNode toDoNode = new ToDoNode(name, urgency, duration, priority, project);
         toDoNodeService.saveToDoNode(toDoNode);
         return "redirect:/all";
@@ -61,10 +61,24 @@ public class ToDoController {
 
     @PostMapping(value = "/delete_todo")
     public @ResponseBody
-    void deleteLineItem(@RequestParam Map<String, String> queryParameters) {
+    void deleteToDo(@RequestParam Map<String, String> queryParameters) {
         Long todoId = Long.parseLong(queryParameters.get("toDoId"), 10);
         toDoNodeService.deleteToDoNode(todoId);
     }
 
+    @PostMapping(value = "/delete_project")
+    @Transactional
+    public @ResponseBody
+    void deleteProject(@RequestParam Map<String, String> queryParameters) {
+        Long projectId = Long.parseLong(queryParameters.get("projectId"), 10);
+        Project project = projectService.findById(projectId);
+        toDoNodeService.deleteToDoNodeByProjectId(project);
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        projectService.deleteProject(projectId);
+    }
 
 }

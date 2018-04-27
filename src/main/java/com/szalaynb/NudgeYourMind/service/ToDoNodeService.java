@@ -31,6 +31,10 @@ public class ToDoNodeService implements ToDoNodeServiceRequirements {
         toDoNodeRepository.deleteById(id);
     }
 
+    public void deleteToDoNodeByProjectId(Project project) {
+        toDoNodeRepository.deleteToDoNodesByProject(project);
+    }
+
     public boolean isToDoCountZero() {
         return toDoNodeRepository.count() == 0;
     }

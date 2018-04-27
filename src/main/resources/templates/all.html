@@ -15,17 +15,17 @@
 
 </head>
 <body>
-<div class="container">
+<div id="navbar" class="container align-self-center sticky-top">
     <div id="AllToDoBtn" class="btn btn-dark btn-lg">All ToDos</div>
     <div id="AllProjectsBtn" class="btn btn-dark btn-lg">Projects</div>
     <div id="ToDoPlannerBtn" class="btn btn-dark btn-lg">TODO Planner</div>
     <div id="RageModeBtn" class="btn btn-dark btn-lg">Rage Mode</div>
 </div>
-<div class="container">
-    <button id="newToDoBtn" class="btn btn-primary">New ToDo</button>
-    <button id="closeToDoCreation" class="hide btn btn-primary">Cancel</button>
-    <button id="newProjectBtn" class="btn btn-primary">New Project</button>
-    <button id="closeProjectCreation" class="hide btn btn-primary">Cancel</button>
+<div id="addStuff" class="container align-self-center sticky-bottom">
+    <button id="newToDoBtn" class="btn btn-lg btn-primary">New ToDo</button>
+    <button id="closeToDoCreation" class="hide btn-lg btn btn-primary">Cancel</button>
+    <button id="newProjectBtn" class="btn btn-lg btn-primary">New Project</button>
+    <button id="closeProjectCreation" class="hide btn btn-lg btn-primary">Cancel</button>
     <div id="newToDoDiv" class="hide">
         <div class="row">
             <form action="/add_todo" method="post">
@@ -80,7 +80,7 @@
     </div>
 </div>
 <div id="allToDoDiv" class="container">
-    <div id="todoDiv">
+    <div id="todoDiv" class="align-self-center">
         <table>
             <tr>
                 <td class="font-weight-bold bg-warning bg-info border border-dark">ToDo</td>
@@ -95,33 +95,37 @@
                 <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                 <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
                 <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
-                <td><button class="btn-danger btn" th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
+                <td class="border border-dark"><button class="btn-danger btn" th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
 
             </tr>
         </table>
     </div>
 </div>
 <div id="allProjectsDiv" class="container hide">
-    <div id="projectsDiv" th:each="project: ${projects}">
-        <h2 th:text="${project.getName()}">Project x</h2>
-        <table>
-            <tr>
-                <td class="font-weight-bold bg-warning border border-dark">ToDo</td>
-                <td class="font-weight-bold bg-warning border border-dark">Urgent</td>
-                <td class="font-weight-bold bg-warning border border-dark">Duration(min)</td>
-                <td class="font-weight-bold bg-warning border border-dark">Priority</td>
-                <td class="font-weight-bold bg-warning border border-dark">Project</td>
-            </tr>
-            <tr th:each="todo: ${project.getToDoNodeList()}" th:id="todo+${todo.getId()}">
-                <td class="border font-weight-bold border-dark" th:text="${todo.getName()}">thing 1</td>
-                <td class="border border-dark" th:text="${todo.isUrgent()}">urgency</td>
-                <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
-                <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
-                <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
-                <td><button class="btn-danger btn" th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
+    <div id="projectsDiv" class="align-self-center" th:each="project: ${projects}">
+        <div th:id="project+${project.getId()}">
+            <h2 th:text="${project.getName()}">Project x</h2>
+            <button class="btn-danger btn" th:onclick="'deleteProject(' + ${project.getId()} + ')'">X</button>
+            <table>
+                <tr>
+                    <td class="font-weight-bold bg-warning border border-dark">ToDo</td>
+                    <td class="font-weight-bold bg-warning border border-dark">Urgent</td>
+                    <td class="font-weight-bold bg-warning border border-dark">Duration(min)</td>
+                    <td class="font-weight-bold bg-warning border border-dark">Priority</td>
+                    <td class="font-weight-bold bg-warning border border-dark">Project</td>
+                </tr>
+                <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
+                    <td class="border font-weight-bold border-dark" th:text="${todo.getName()}">thing 1</td>
+                    <td class="border border-dark" th:text="${todo.isUrgent()}">urgency</td>
+                    <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
+                    <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
+                    <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
+                    <td><button class="btn-danger btn" th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
 
-            </tr>
-        </table>
+                </tr>
+            </table>
+        </div>
+
     </div>
 </div>
 
