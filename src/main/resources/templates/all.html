@@ -27,56 +27,42 @@
     <button id="newProjectBtn" class="btn btn-lg btn-primary">New Project</button>
     <button id="closeProjectCreation" class="hide btn btn-lg btn-primary">Cancel</button>
     <div id="newToDoDiv" class="hide">
-        <div class="row">
-            <form action="/add_todo" method="post">
-                What you want to do?
-                <label>
-                    <input type="text" name="todo_name" required>
-                </label>
-                <br>
-                Is it urgent?
-                <label>
-                    <select name="todo_urgency">
-                        <option value="true">Yes</option>
-                        <option value="false" selected>No</option>
-                    </select>
-                </label>
-                <br>
-                How many minutes is it about?
-                <label>
-                    <input type="number" name="todo_duration" required>
-                </label>
-                <br>
-                How important is it?
-                <label>
-                    <select name="todo_priority">
-                        <option value="P0" selected>No Priority</option>
-                        <option value="P1">Low Priority</option>
-                        <option value="P2">Medium Priority</option>
-                        <option value="P3">High Priority</option>
-                    </select>
-                </label>
-                <br>
-                Which project it belongs to?
-                <label>
-                    <select name="todo_project">
-                        <option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name}"></option>
-                    </select>
-                </label>
-                <br>
-                <button class="btn btn-success" type="submit">Add ToDo</button>
-            </form>
-        </div>
+	    <form action="/add_todo" method="post">
+		<label for="todo_name_id">What you want to do?</label>
+			<input id="todo_name_id" type="text" name="todo_name" required>
+		<br>
+		<label for="todo_urgency_id">Is it urgent?</label>
+		    	<select id="todo_urgency_id" name="todo_urgency">
+				<option value="true">Yes</option>
+				<option value="false" selected>No</option>
+		    	</select>
+		<br>
+		<label for="todo_duration_id">How many minutes is it about?</label>
+			<input id="todo_duration_id" type="number" name="todo_duration" required>
+		<br>
+		<label for="todo_priority_id">How important is it?</label>
+			<select id="todo_priority_id" name="todo_priority">
+				<option value="P0" selected>No Priority</option>
+			        <option value="P1">Low Priority</option>
+			        <option value="P2">Medium Priority</option>
+			        <option value="P3">High Priority</option>
+			</select>
+		<br>
+		<label for="todo_project_id">Which project it belongs to?</label>
+			<select id="todo_project_id"  name="todo_project">
+			        <option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name}"></option>
+			</select>
+		<br>
+		<button class="btn btn-success" type="submit">Add ToDo</button>
+	    </form>	
     </div>
     <div id="newProjectDiv" class="hide">
-        <form action="/add_project" method="post">
-            What is your new project?
-            <label>
-                <input type="text" name="project_name" required>
-            </label>
-            <br>
-            <button class="btn btn-success" type="submit">Add Project</button>
-        </form>
+		<form action="/add_project" method="post">
+		    <label for="project_name_id">What is your new project?</label>
+		    	<input type="text" id="project_name_id" name="project_name" required>
+		    <br>
+		    <button class="btn btn-success" type="submit">Add Project</button>
+		</form>
     </div>
 </div>
 <div id="allToDoDiv" class="container">
@@ -95,7 +81,7 @@
                 <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                 <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
                 <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
-                <td class="border border-dark"><button class="btn-danger btn" th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
+                <td class="border border-dark"><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
             </tr>
         </table>
@@ -105,7 +91,7 @@
     <div id="projectsDiv" class="align-self-center" th:each="project: ${projects}">
         <div th:id="project+${project.getId()}">
             <h2 th:text="${project.getName()}">Project x</h2>
-            <button class="btn-danger btn" th:onclick="'deleteProject(' + ${project.getId()} + ')'">X</button>
+            <button class="btn-danger btn" th:onclick="'areYouSureProject(' + ${project.getId()} + ')'">X</button>
             <table>
                 <tr>
                     <td class="font-weight-bold bg-warning border border-dark">ToDo</td>
@@ -120,7 +106,7 @@
                     <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                     <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
                     <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
-                    <td><button class="btn-danger btn" th:onclick="'deleteToDo(' + ${todo.getId()} + ')'">X</button></td>
+                    <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
                 </tr>
             </table>

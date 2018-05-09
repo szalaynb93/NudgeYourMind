@@ -1,36 +1,3 @@
-function deleteToDo(id) {
-    $.ajax({
-        url: '/delete_todo',
-        type: 'POST',
-        data: {"toDoId" : id},
-        success: function (data) {
-            $("#todo" + id).remove();
-            $("#ptodo" + id).remove();
-
-            console.log("ToDo Deleted: " + data.responseText);
-        },
-        error: function (data) {
-            console.log("ToDo deletion ERROR. Data: " + data.responseText);
-        }
-    })
-}
-
-function deleteProject(id) {
-    $.ajax({
-        url: '/delete_project',
-        type: 'POST',
-        data: {"projectId" : id},
-        success: function (data) {
-            $("#project" + id).remove();
-            console.log("Project Deleted: " + data.responseText);
-        },
-        error: function (data) {
-            console.log("Project deletion ERROR. Data: " + data.responseText);
-        }
-    })
-}
-
-
 const NTDB = document.querySelector("#newToDoBtn");
 const CNTDB = document.querySelector("#closeToDoCreation");
 const NTDDIV = document.querySelector("#newToDoDiv");
@@ -91,5 +58,53 @@ function projectView() {
     ATDDIV.classList.add("hide");
 }
 
+projectView();
+
 ATDB.onclick = todoView;
 APB.onclick = projectView;
+
+function areYouSureToDo(id) {
+    var ok = confirm("Are you sure to delete this todo?");
+    if (ok === true) {
+        deleteToDo(id)
+    }
+}
+
+function areYouSureProject(id) {
+    var ok = confirm("Are you sure to delete this project? All todos related will be deleted as well.");
+    if (ok === true) {
+        deleteProject(id)
+    }
+}
+
+function deleteToDo(id) {
+    $.ajax({
+        url: '/delete_todo',
+        type: 'POST',
+        data: {"toDoId" : id},
+        success: function (data) {
+            $("#todo" + id).remove();
+            $("#ptodo" + id).remove();
+
+            console.log("ToDo Deleted: " + data.responseText);
+        },
+        error: function (data) {
+            console.log("ToDo deletion ERROR. Data: " + data.responseText);
+        }
+    })
+}
+
+function deleteProject(id) {
+    $.ajax({
+        url: '/delete_project',
+        type: 'POST',
+        data: {"projectId" : id},
+        success: function (data) {
+            $("#project" + id).remove();
+            console.log("Project Deleted: " + data.responseText);
+        },
+        error: function (data) {
+            console.log("Project deletion ERROR. Data: " + data.responseText);
+        }
+    })
+}
