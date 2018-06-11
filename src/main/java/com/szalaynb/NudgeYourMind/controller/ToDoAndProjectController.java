@@ -17,13 +17,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
 @Controller
-public class ToDoController {
+public class ToDoAndProjectController {
 
-    @Autowired
+    private final
     ToDoNodeService toDoNodeService;
 
-    @Autowired
+    private final
     ProjectService projectService;
+
+    @Autowired
+    public ToDoAndProjectController(ToDoNodeService toDoNodeService, ProjectService projectService) {
+        this.toDoNodeService = toDoNodeService;
+        this.projectService = projectService;
+    }
 
     @GetMapping(value = "/all")
     public String renderAllToDo(Model model) {
@@ -73,11 +79,6 @@ public class ToDoController {
         Long projectId = Long.parseLong(queryParameters.get("projectId"), 10);
         Project project = projectService.findById(projectId);
         toDoNodeService.deleteToDoNodeByProjectId(project);
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
         projectService.deleteProject(projectId);
     }
 

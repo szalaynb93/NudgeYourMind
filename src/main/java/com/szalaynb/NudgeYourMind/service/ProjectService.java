@@ -3,13 +3,16 @@ package com.szalaynb.NudgeYourMind.service;
 import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@RepositoryRestResource
 @Service
-public class ProjectService implements ProjectServiceRequirements {
+public class ProjectService {
 
     private final ProjectRepository projectRepository;
 
@@ -18,17 +21,14 @@ public class ProjectService implements ProjectServiceRequirements {
         this.projectRepository = projectRepository;
     }
 
-    @Override
     public List<Project> findAll() {
         return projectRepository.findAll();
     }
 
-    @Override
     public Project findById(Long id) {
         return projectRepository.findById(id).get();
     }
 
-    @Override
     public void saveProject(Project project) {
         projectRepository.save(project);
     }

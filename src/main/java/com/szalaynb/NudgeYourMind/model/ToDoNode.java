@@ -11,7 +11,7 @@ public class ToDoNode {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    private String toDoName;
 
     private boolean isUrgent;
 
@@ -26,17 +26,17 @@ public class ToDoNode {
 
     }
 
-    public ToDoNode(String name) {
-        this.name = name;
+    public ToDoNode(String toDoName) {
+        this.toDoName = toDoName;
     }
 
-    public ToDoNode(String name, Project project) {
-        this.name = name;
+    public ToDoNode(String toDoName, Project project) {
+        this.toDoName = toDoName;
         this.project = project;
     }
 
-    public ToDoNode(String name, boolean isUrgent, int duration, Priority priority, Project project) {
-        this.name = name;
+    public ToDoNode(String toDoName, boolean isUrgent, int duration, Priority priority, Project project) {
+        this.toDoName = toDoName;
         this.isUrgent = isUrgent;
         this.duration = duration;
         this.priority = priority;
@@ -75,12 +75,12 @@ public class ToDoNode {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getToDoName() {
+        return toDoName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setToDoName(String toDoName) {
+        this.toDoName = toDoName;
     }
 
     public Priority getPriority() {

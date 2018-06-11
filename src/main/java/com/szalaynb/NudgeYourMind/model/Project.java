@@ -9,15 +9,15 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name;
+    private String projectName;
     @OneToMany(mappedBy = "project")
     private List<ToDoNode> toDoNodeList;
 
     public Project() {
     }
 
-    public Project(String name) {
-        this.name = name;
+    public Project(String projectName) {
+        this.projectName = projectName;
     }
 
     public List<ToDoNode> getToDoNodeList() {
@@ -30,8 +30,8 @@ public class Project {
         this.toDoNodeList = toDoNodeList;
     }
 
-//    public Project(String name, Color color) {
-//        this.name = name;
+//    public Project(String projectName, Color color) {
+//        this.projectName = projectName;
 //        this.color = color;
 //    }
 
@@ -43,12 +43,12 @@ public class Project {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
 //    public Color getColor() {
