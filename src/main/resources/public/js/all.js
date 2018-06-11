@@ -64,14 +64,14 @@ ATDB.onclick = todoView;
 APB.onclick = projectView;
 
 function areYouSureToDo(id) {
-    var ok = confirm("Are you sure to delete this todo?");
+    let ok = confirm("Are you sure to delete this todo?");
     if (ok === true) {
         deleteToDo(id)
     }
 }
 
 function areYouSureProject(id) {
-    var ok = confirm("Are you sure to delete this project? All todos related will be deleted as well.");
+    let ok = confirm("Are you sure to delete this project? All todos related will be deleted as well.");
     if (ok === true) {
         deleteProject(id)
     }

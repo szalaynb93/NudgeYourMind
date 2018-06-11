@@ -5,12 +5,15 @@ import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.ToDoNode;
 import com.szalaynb.NudgeYourMind.repository.ToDoNodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@RepositoryRestResource
 @Service
-public class ToDoNodeService implements ToDoNodeServiceRequirements {
+public class ToDoNodeService {
 
     private final ToDoNodeRepository toDoNodeRepository;
 
@@ -39,13 +42,11 @@ public class ToDoNodeService implements ToDoNodeServiceRequirements {
         return toDoNodeRepository.count() == 0;
     }
 
-    @Override
     public List<ToDoNode> findByPriority(Priority priority) {
         return null;
         //TODO create repo and functionality
     }
 
-    @Override
     public List<ToDoNode> findByProject(Project project) {
         return null;
         //TODO create repo and functionality

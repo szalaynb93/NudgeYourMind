@@ -50,7 +50,7 @@
 		<br>
 		<label for="todo_project_id">Which project it belongs to?</label>
 			<select id="todo_project_id"  name="todo_project">
-			        <option th:each="project : ${projects}" th:value="${project.id}" th:text="${project.name}"></option>
+			        <option th:each="project:${projects}" th:value="${project.id}" th:text="${project.projectName}"></option>
 			</select>
 		<br>
 		<button class="btn btn-success" type="submit">Add ToDo</button>
@@ -76,11 +76,11 @@
                 <td class="font-weight-bold bg-warning bg-info border border-dark">Project</td>
             </tr>
             <tr th:each="todo: ${todolist}" th:id="todo+${todo.getId()}">
-                <td class="border font-weight-bold border-dark" th:text="${todo.getName()}">thing 1</td>
+                <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
                 <td class="border border-dark" th:text="${todo.isUrgent()}">urgency</td>
                 <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                 <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
-                <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
+                <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
                 <td class="border border-dark"><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
             </tr>
@@ -88,9 +88,9 @@
     </div>
 </div>
 <div id="allProjectsDiv" class="container hide">
-    <div id="projectsDiv" class="align-self-center" th:each="project: ${projects}">
+    <div id="projectsDiv" class="align-self-center" th:each="project:${projects}">
         <div th:id="project+${project.getId()}">
-            <h2 th:text="${project.getName()}">Project x</h2>
+            <h2 th:text="${project.getProjectName()}">Project x</h2>
             <button class="btn-danger btn" th:onclick="'areYouSureProject(' + ${project.getId()} + ')'">X</button>
             <table>
                 <tr>
@@ -101,11 +101,11 @@
                     <td class="font-weight-bold bg-warning border border-dark">Project</td>
                 </tr>
                 <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
-                    <td class="border font-weight-bold border-dark" th:text="${todo.getName()}">thing 1</td>
+                    <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
                     <td class="border border-dark" th:text="${todo.isUrgent()}">urgency</td>
                     <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                     <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
-                    <td class="border border-dark" th:text="${todo.getProject().getName()}">project1</td>
+                    <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
                     <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
                 </tr>
