@@ -1,8 +1,11 @@
 package com.szalaynb.NudgeYourMind.model;
 
+import com.szalaynb.NudgeYourMind.model.enums.Color;
 import com.szalaynb.NudgeYourMind.model.enums.Priority;
+import com.szalaynb.NudgeYourMind.model.enums.Urgency;
 
 import javax.persistence.*;
+import java.util.Arrays;
 
 @Entity
 public class ToDoNode {
@@ -13,19 +16,19 @@ public class ToDoNode {
 
     private String toDoName;
 
-    private boolean isUrgent;
-
+    @Enumerated
+    private Urgency urgency;
+    @Enumerated
+    private Color color;
     private int duration;
     @Enumerated
     private Priority priority = Priority.P0;
-
     @ManyToOne
     private Project project;
 
     public ToDoNode() {
 
     }
-
     public ToDoNode(String toDoName) {
         this.toDoName = toDoName;
     }
@@ -35,20 +38,39 @@ public class ToDoNode {
         this.project = project;
     }
 
-    public ToDoNode(String toDoName, boolean isUrgent, int duration, Priority priority, Project project) {
+    public ToDoNode(String toDoName, Urgency urgency, int duration, Priority priority,
+                    Project project) {
         this.toDoName = toDoName;
-        this.isUrgent = isUrgent;
+        this.urgency = urgency;
         this.duration = duration;
         this.priority = priority;
         this.project = project;
+        for (Color color : Arrays.asList(Color.WHITE, Color.YELLOW, Color.ORANGE, Color.RED, Color.BROWN)) {
+            if (color.getValue() == urgency.getValue() + priority.getValue()) {
+                this.color = color;
+                break;
+            }
+        }
     }
 
-    public boolean isUrgent() {
-        return isUrgent;
+    public Color getColor() {
+        return color;
     }
 
-    public void setUrgent(boolean urgent) {
-        isUrgent = urgent;
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Urgency getUrgency() {
+        return urgency;
+    }
+
+    public void setUrgency(Urgency urgency) {
+        this.urgency = urgency;
+    }
+
+    public void setUrgent(Urgency urgency) {
+        this.urgency = urgency;
     }
 
     public int getDuration() {
