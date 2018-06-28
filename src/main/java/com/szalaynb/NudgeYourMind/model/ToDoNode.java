@@ -29,15 +29,6 @@ public class ToDoNode {
     public ToDoNode() {
 
     }
-    public ToDoNode(String toDoName) {
-        this.toDoName = toDoName;
-    }
-
-    public ToDoNode(String toDoName, Project project) {
-        this.toDoName = toDoName;
-        this.project = project;
-    }
-
     public ToDoNode(String toDoName, Urgency urgency, int duration, Priority priority,
                     Project project) {
         this.toDoName = toDoName;

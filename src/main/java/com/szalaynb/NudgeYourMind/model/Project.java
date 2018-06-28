@@ -10,6 +10,8 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String projectName;
+    @ManyToOne
+    private Room room;
     @OneToMany(mappedBy = "project")
     private List<ToDoNode> toDoNodeList;
 
@@ -17,23 +19,31 @@ public class Project {
     }
 
     public Project(String projectName) {
+        // Todo: If created with name only, then default is something
         this.projectName = projectName;
+    }
+
+    public Project(String projectName, Room room) {
+        this.projectName = projectName;
+        this.room = room;
+    }
+
+    public Room getRoom() {
+
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
     public List<ToDoNode> getToDoNodeList() {
         return toDoNodeList;
     }
-    //@Enumerated
-    //private Color color;
 
     public void setToDoNodeList(List<ToDoNode> toDoNodeList) {
         this.toDoNodeList = toDoNodeList;
     }
-
-//    public Project(String projectName, Color color) {
-//        this.projectName = projectName;
-//        this.color = color;
-//    }
 
     public long getId() {
         return id;
@@ -50,12 +60,4 @@ public class Project {
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
-
-//    public Color getColor() {
-//        return color;
-//    }
-//
-//    public void setColor(Color color) {
-//        this.color = color;
-//    }
 }

@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6e1402c-f3ab-4c7e-92c1-e2db5b075cdb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Urgency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Priority.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Priority.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,19 +65,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ToDoNode.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java">
+      <file leaf-file-name="Project.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="738">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
               <folding>
-                <element signature="method#ToDoNode#0;class#ToDoNode#0" />
+                <element signature="e#570#571#0" expanded="true" />
                 <element signature="e#602#603#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#671#672#0" expanded="true" />
-                <element signature="e#705#706#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1100#1101#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,8 +89,8 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -138,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/built/bundle.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/home.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/all.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/all.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
@@ -155,6 +148,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Urgency.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" />
       </list>
     </option>
   </component>
@@ -283,7 +278,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
               <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
@@ -295,7 +290,17 @@
               <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
               <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
@@ -482,7 +487,7 @@
       <workItem from="1528194927275" duration="12616000" />
       <workItem from="1528724711660" duration="4221000" />
       <workItem from="1528969974291" duration="581000" />
-      <workItem from="1530022438057" duration="11266000" />
+      <workItem from="1530022438057" duration="12559000" />
     </task>
     <servers />
   </component>
@@ -495,7 +500,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133833000" />
+    <option name="totallyTimeSpent" value="135126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -593,14 +598,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java</url>
-          <line>95</line>
+          <line>86</line>
           <properties class="com.szalaynb.NudgeYourMind.model.ToDoNode" method="setId">
             <option name="EMULATED" value="true" />
           </properties>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java</url>
-          <line>103</line>
+          <line>94</line>
           <properties class="com.szalaynb.NudgeYourMind.model.ToDoNode" method="setToDoName">
             <option name="EMULATED" value="true" />
           </properties>
@@ -611,13 +616,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -741,13 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-rest-core/3.0.7.RELEASE/spring-data-rest-core-3.0.7.RELEASE.jar!/org/springframework/data/rest/core/annotation/RepositoryRestResource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -799,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -830,13 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -848,16 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="808">
           <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -906,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="648">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding>
             <element signature="method#ToDoNode#0;class#ToDoNode#0" />
             <element signature="e#602#603#0" expanded="true" />
@@ -916,6 +883,54 @@
             <element signature="e#705#706#0" expanded="true" />
             <element signature="e#533#534#0" expanded="true" />
             <element signature="e#571#572#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="84" column="1" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="25" />
+          <folding>
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
           </folding>
         </state>
       </provider>
