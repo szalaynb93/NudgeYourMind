@@ -1,18 +1,35 @@
 package com.szalaynb.NudgeYourMind.model;
 
+
+import javax.persistence.*;
+
+@Entity
 public class Link {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     private String url;
+    @ManyToOne
+    private Room room;
 
     public Link() {
     }
 
-    public Link(String name, String url) {
+    public Link(String name, String url, Room room) {
 
         this.name = name;
         this.url = url;
+        this.room = room;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
     public long getId() {
