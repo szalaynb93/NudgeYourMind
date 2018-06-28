@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6e1402c-f3ab-4c7e-92c1-e2db5b075cdb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/LinkRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ToDoNodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ToDoNodeRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,11 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LinkRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/LinkRepository.java">
+      <file leaf-file-name="ProjectService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="234">
+              <caret line="23" selection-start-line="23" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -152,6 +147,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ToDoNodeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/LinkRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java" />
       </list>
     </option>
   </component>
@@ -361,8 +357,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.szalaynb.NudgeYourMind.service" />
       <recent name="com.szalaynb.NudgeYourMind.repository" />
+      <recent name="com.szalaynb.NudgeYourMind.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
@@ -500,7 +496,7 @@
       <workItem from="1528194927275" duration="12616000" />
       <workItem from="1528724711660" duration="4221000" />
       <workItem from="1528969974291" duration="581000" />
-      <workItem from="1530022438057" duration="15449000" />
+      <workItem from="1530022438057" duration="17008000" />
     </task>
     <servers />
   </component>
@@ -513,7 +509,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138016000" />
+    <option name="totallyTimeSpent" value="139575000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,6 +522,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-35" width="1282" height="1060" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5027494" side_tool="true" weight="0.281493" />
@@ -628,7 +625,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -899,27 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ToDoNodeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ProjectRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ToDoNodeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -937,10 +912,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ToDoNodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ProjectRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/LinkRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="23" selection-start-line="23" selection-end-line="38" />
         </state>
       </provider>
     </entry>
