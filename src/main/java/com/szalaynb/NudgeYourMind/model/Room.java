@@ -15,9 +15,9 @@ public class Room {
     @GeneratedValue
     private long id;
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "room")
     private List<Project> roomsProjectList;
-    @OneToMany
+    @OneToMany(mappedBy = "room")
     private List<Link> linkList;
     private Color themeColor;
     //    roadSignal is indicating the top priority stuff's color inside a room and
@@ -27,12 +27,11 @@ public class Room {
     public Room() {
     }
 
-    public Room(String name, List<Project> roomsProjectList, Color themeColor) {
+    public Room(String name, Color themeColor) {
 
         this.name = name;
-        this.roomsProjectList = roomsProjectList;
         this.themeColor = themeColor;
-        this.linkList = new ArrayList<>();
+
     }
 
     public List<Link> getLinkList() {
@@ -66,6 +65,10 @@ public class Room {
 
     public void setRoomsProjectList(List<Project> roomsProjectList) {
         this.roomsProjectList = roomsProjectList;
+    }
+
+    public void setLinkList(List<Link> linkList) {
+        this.linkList = linkList;
     }
 
     public Color getThemeColor() {

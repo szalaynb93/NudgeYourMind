@@ -35,5 +35,9 @@ public class RoomService {
         roomRepository.deleteById(id);
     }
 
+    public boolean isRoomCountZero() {
+        return roomRepository.count() == 0;
+    }
+
 
 }

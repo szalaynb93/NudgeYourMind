@@ -18,10 +18,10 @@ public class Project {
     public Project() {
     }
 
-    public Project(String projectName) {
-        // Todo: If created with name only, then default is something
-        this.projectName = projectName;
-    }
+//    public Project(String projectName) {
+//        // Todo: If created with name only, then default is something
+//        this.projectName = projectName;
+//    }
 
     public Project(String projectName, Room room) {
         this.projectName = projectName;

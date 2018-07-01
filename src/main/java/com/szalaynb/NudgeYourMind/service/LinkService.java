@@ -35,5 +35,9 @@ public class LinkService {
         linkRepository.deleteById(id);
     }
 
+    public boolean isLinkCountZero() {
+        return linkRepository.count() == 0;
+    }
+
 
 }

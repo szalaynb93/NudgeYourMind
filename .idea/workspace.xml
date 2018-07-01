@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6e1402c-f3ab-4c7e-92c1-e2db5b075cdb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,37 +33,48 @@
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nym@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="nym@localhost [2]" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nym@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="nym@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nym@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="nym: database" type="6d9b600a:PostgresImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nym@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="nym@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nym: database" type="6d9b600a:PostgresImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nym@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nym: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="nym@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="nym: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="nym@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="nym@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="nym: database" type="6d9b600a:PostgresImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
@@ -64,11 +83,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjectService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="23" selection-start-line="23" selection-end-line="38" />
+            <state relative-caret-position="108">
+              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Project.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room_link_list" pinned="false" current-in-tab="false">
+        <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/room_link_list">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+              <column-attributes>
+                <column name="ctid" enabled="false" />
+              </column-attributes>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room_rooms_project_list" pinned="false" current-in-tab="false">
+        <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/room_rooms_project_list">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+              <column-attributes>
+                <column name="ctid" enabled="false" />
+              </column-attributes>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="to_do_node" pinned="false" current-in-tab="false">
+        <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/to_do_node">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="link" pinned="false" current-in-tab="false">
+        <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/link">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project" pinned="false" current-in-tab="false">
+        <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/project">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="room" pinned="false" current-in-tab="false">
+        <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/room">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToDoNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+              <folding>
+                <element signature="method#ToDoNode#0;class#ToDoNode#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1550#1551#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,6 +209,8 @@
       <find>api</find>
       <find>/api</find>
       <find>isUrgent</find>
+      <find>Project</find>
+      <find>link</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplicationTests.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Color.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectServiceRequirements.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/projects.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/projects.html" />
         <option value="$PROJECT_DIR$/src/main/resources/public/css/all.css" />
@@ -126,7 +240,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/public/js/all.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/all.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ToDoNodeService.java" />
@@ -135,19 +248,22 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Priority.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Urgency.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/rooms/Workroom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/rooms/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ToDoNodeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/LinkRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" />
       </list>
     </option>
   </component>
@@ -298,6 +414,18 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
               <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -322,6 +450,13 @@
               <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -343,6 +478,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="PostgreSQL" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../restReact/tut-react-and-spring-data-rest" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -496,7 +632,7 @@
       <workItem from="1528194927275" duration="12616000" />
       <workItem from="1528724711660" duration="4221000" />
       <workItem from="1528969974291" duration="581000" />
-      <workItem from="1530022438057" duration="17008000" />
+      <workItem from="1530022438057" duration="26946000" />
     </task>
     <servers />
   </component>
@@ -509,7 +645,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139575000" />
+    <option name="totallyTimeSpent" value="149513000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,21 +666,23 @@
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="0" />
-      <window_info anchor="right" id="Database" order="1" weight="0.21523958" />
+      <window_info anchor="right" id="Database" order="1" visible="true" weight="0.31617647" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.2659409" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.32970452" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.1710731" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4972506" weight="0.27597404" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4972506" weight="0.43965518" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.14610389" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32900432" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49763033" visible="true" weight="0.325" />
+      <window_info anchor="bottom" id="Database Console" visible="true" weight="0.3297414" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49763033" visible="true" weight="0.31617647" />
       <window_info anchor="bottom" id="Problems" order="14" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="4" sideWeight="0.50236964" side_tool="true" weight="0.27022782" />
@@ -554,7 +692,6 @@
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Commander" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.1710731" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32917318" />
@@ -564,7 +701,7 @@
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.14610389" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4972506" weight="0.27597404" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4972506" weight="0.76185346" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -583,9 +720,9 @@
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="right" id="Maven Projects" order="0" weight="0.2529458" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32917318" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49763033" visible="true" weight="0.49872556" />
+      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49763033" visible="true" weight="0.35702613" />
       <window_info id="Learn" order="3" />
-      <window_info anchor="right" id="Database" order="1" weight="0.21523958" />
+      <window_info anchor="right" id="Database" order="1" weight="0.3611111" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info id="Web" order="4" sideWeight="0.50236964" side_tool="true" weight="0.27022782" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -625,30 +762,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.0.1.RELEASE/spring-boot-starter-web-2.0.1.RELEASE.jar!/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-web/2.0.1.RELEASE/spring-boot-starter-web-2.0.1.RELEASE.jar!/META-INF/spring.provides">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ff69912a-679e-41fe-bf36-dffd2c3e7640/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/de03d7e1-5570-4f6d-83d6-d743adc73c48/console.sql" />
-    <entry file="das://table:/879db0da/de03d7e1-5570-4f6d-83d6-d743adc73c48/nym.public.project_to_do_node_list" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar!/javax/persistence/OneToMany.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -730,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectServiceRequirements.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ToDoNodeServiceRequirements.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/all.html">
@@ -767,23 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/DatabaseLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/js/all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="808">
@@ -799,13 +888,6 @@
             <element signature="e#211#212#0" expanded="true" />
             <element signature="e#239#240#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -827,29 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding>
-            <element signature="method#ToDoNode#0;class#ToDoNode#0" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/rooms/Workroom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -857,41 +916,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#767#768#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#859#860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="63" column="6" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -912,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ToDoNodeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/ProjectRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -936,22 +953,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ProjectService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="23" selection-start-line="23" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/DatabaseLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/enums/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/ToDoNodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="53" column="7" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/25599247-376f-4ba3-8a54-0fe4661f1544/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/LinkService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/link">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/room">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/room_rooms_project_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/to_do_node">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/room_link_list">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+          <folding>
+            <element signature="method#ToDoNode#0;class#ToDoNode#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
