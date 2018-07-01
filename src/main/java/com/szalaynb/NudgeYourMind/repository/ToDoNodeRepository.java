@@ -7,7 +7,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 public interface ToDoNodeRepository extends JpaRepository<ToDoNode, Long> {
-//    void deleteToDoNodesByProjectId(Long id);
-
     void deleteToDoNodesByProject(Project project);
 }

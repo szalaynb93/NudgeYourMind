@@ -45,13 +45,13 @@ public class ToDoAndProjectController {
         return "projects";
     }
 
-    @PostMapping(value = "/add_project")
-    public String saveProject(@RequestParam Map<String, String> queryParameters) {
-        String name = queryParameters.get("project_name");
-        Project project = new Project(name);
-        projectService.saveProject(project);
-        return "redirect:/all";
-    }
+//    @PostMapping(value = "/add_project")
+//    public String saveProject(@RequestParam Map<String, String> queryParameters) {
+//        String name = queryParameters.get("project_name");
+//        Project project = new Project(name);
+//        projectService.saveProject(project);
+//        return "redirect:/all";
+//    }
 
     @PostMapping(value = "/add_todo")
     public String saveToDo(@RequestParam Map<String, String> queryParameters) {
@@ -60,8 +60,8 @@ public class ToDoAndProjectController {
         int duration = Integer.parseInt(queryParameters.get("todo_duration"));
         Priority priority = Priority.valueOf(queryParameters.get("todo_priority"));
         Project project = projectService.findById(Long.parseLong(queryParameters.get("todo_project")));
-        ToDoNode toDoNode = new ToDoNode(name, urgency, duration, priority, project);
-        toDoNodeService.saveToDoNode(toDoNode);
+//todo        ToDoNode toDoNode = new ToDoNode(name, urgency, duration, priority, project);
+//todo        toDoNodeService.saveToDoNode(toDoNode);
         return "redirect:/all";
     }
 

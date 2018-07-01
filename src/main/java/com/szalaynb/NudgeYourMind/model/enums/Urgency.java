@@ -1,17 +1,18 @@
 package com.szalaynb.NudgeYourMind.model.enums;
 
+public enum Urgency {
 
-public enum Priority {
-
-    P0(0), P1(1), P2(2);
+    NOTREALLY(1), AVERAGE(2), URGENT(3);
 
     private int value;
 
-    Priority(int value) {
+    Urgency(int value) {
+
         this.value = value;
     }
 
     public int getValue() {
         return value;
     }
+
 }
