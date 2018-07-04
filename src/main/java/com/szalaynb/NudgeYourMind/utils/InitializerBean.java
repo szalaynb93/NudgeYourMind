@@ -6,6 +6,7 @@ import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.model.enums.Urgency;
 import com.szalaynb.NudgeYourMind.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

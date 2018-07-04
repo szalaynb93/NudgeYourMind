@@ -38,13 +38,6 @@ public class ToDoAndProjectController {
         return "all";
     }
 
-    @GetMapping(value = "/projects")
-    public String renderProjects(Model model) {
-        model.addAttribute("projects", projectService.findAll());
-        model.addAttribute("todos", toDoNodeService.findAll());
-        return "projects";
-    }
-
 //    @PostMapping(value = "/add_project")
 //    public String saveProject(@RequestParam Map<String, String> queryParameters) {
 //        String name = queryParameters.get("project_name");

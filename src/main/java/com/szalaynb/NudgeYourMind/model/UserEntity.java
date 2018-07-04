@@ -1,5 +1,7 @@
 package com.szalaynb.NudgeYourMind.model;
 
+import org.springframework.security.crypto.bcrypt.BCrypt;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +20,7 @@ public class UserEntity {
 
     public UserEntity(String username, String password) {
         this.username = username;
-        this.password = password;
+        this.password = BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
     public UserEntity() {
