@@ -22,7 +22,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/registration")
-    public String renderAllToDo(Model model) {
+    public String renderRegistrationPage(Model model) {
         return "registration";
     }
 
@@ -36,6 +36,16 @@ public class UserController {
         }
         userService.saveUser(new UserEntity(username, password));
         return "redirect:/registration";
+    }
+
+    @GetMapping(value = "/")
+    public String renderLoginPage(Model model) {
+        return "login_page";
+    }
+
+    @GetMapping(value = "/logout-success")
+    public String logoutSuccess(Model model) {
+        return renderLoginPage(model);
     }
 
 
