@@ -12,13 +12,14 @@ import java.util.List;
 public class Room {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
     @OneToMany(mappedBy = "room")
     private List<Project> roomsProjectList;
     @OneToMany(mappedBy = "room")
     private List<Link> linkList;
+
     private Color themeColor;
     //    roadSignal is indicating the top priority stuff's color inside a room and
     //     on the outside of it

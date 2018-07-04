@@ -27,7 +27,7 @@ public class RoomService {
         return roomRepository.findById(id).get();
     }
 
-    public void saveroom(Room room) {
+    public void saveRoom(Room room) {
         roomRepository.save(room);
     }
 

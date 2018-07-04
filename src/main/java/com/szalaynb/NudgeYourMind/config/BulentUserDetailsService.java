@@ -1,4 +1,4 @@
-package com.szalaynb.NudgeYourMind.auth;
+package com.szalaynb.NudgeYourMind.config;
 
 import com.szalaynb.NudgeYourMind.model.UserEntity;
 import com.szalaynb.NudgeYourMind.repository.UserRepository;
