@@ -1,6 +1,6 @@
 package com.szalaynb.NudgeYourMind.auth;
 
-import com.szalaynb.NudgeYourMind.model.User;
+import com.szalaynb.NudgeYourMind.model.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,9 +10,9 @@ import java.util.Collections;
 
 public class BulentUserPrincipal implements UserDetails {
 
-    private User user;
+    private UserEntity user;
 
-    public BulentUserPrincipal(User user) {
+    public BulentUserPrincipal(UserEntity user) {
         super();
         this.user = user;
     }

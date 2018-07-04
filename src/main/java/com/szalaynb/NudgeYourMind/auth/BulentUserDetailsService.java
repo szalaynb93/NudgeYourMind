@@ -1,6 +1,6 @@
 package com.szalaynb.NudgeYourMind.auth;
 
-import com.szalaynb.NudgeYourMind.model.User;
+import com.szalaynb.NudgeYourMind.model.UserEntity;
 import com.szalaynb.NudgeYourMind.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,7 +14,7 @@ public class BulentUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = this.userRepository.findByUsername(username);
+        UserEntity user = this.userRepository.findByUsername(username);
         if (user == null) {
             throw new UsernameNotFoundException("Cannot find username: " + username);
         }
