@@ -35,17 +35,17 @@ public class UserController {
             return "redirect:/registration";
         }
         userService.saveUser(new UserEntity(username, password));
-        return "redirect:/registration";
+        return "redirect:/home";
     }
 
-    @GetMapping(value = "/")
-    public String renderLoginPage(Model model) {
-        return "login_page";
+    @GetMapping(value = "/login")
+    public String getLoginPage(Model model) {
+        return "login";
     }
 
     @GetMapping(value = "/logout-success")
-    public String logoutSuccess(Model model) {
-        return renderLoginPage(model);
+    public String getLogoutPage(Model model) {
+        return "logout";
     }
 
 

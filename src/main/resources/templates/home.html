@@ -1,31 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <link rel="stylesheet" href="/css/home.css" />
-    <script src="/js/home.js" defer></script>
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/site.css"/>
+    <script src="js/home.js" defer></script>
 
 </head>
 <body>
 
 
-    <h1>ToDo App</h1>
-
-    <div id="container">
-        <table id="todos">
-            <tr>
-                <td>ToDo</td>
-                <td>Urgency</td>
-                <td>Priority</td>
-                <td>Duration(mins)</td>
-                <td>Color</td>
-                <td>Project</td>
-            </tr>
-        </table>
+    <div layout:fragment="content">
+        <div class="jumbotron main-content">
+            <h1>Nudge Your Mind</h1>
+        </div>
+        <div class="container">
+            <ul>
+                <li><a th:href="@{/}">Check Home Page</a></li>
+            </ul>
+        </div>
+        <div id="container">
+            <table id="todos">
+                <tr>
+                    <td>ToDo</td>
+                    <td>Urgency</td>
+                    <td>Priority</td>
+                    <td>Duration(mins)</td>
+                    <td>Color</td>
+                    <td>Project</td>
+                </tr>
+            </table>
+        </div>
     </div>
+
+
+
 </body>
 </html>
