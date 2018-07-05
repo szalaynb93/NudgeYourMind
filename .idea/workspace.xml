@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6e1402c-f3ab-4c7e-92c1-e2db5b075cdb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/LinkController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/utils/InitializerBean.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,14 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java">
+      <file leaf-file-name="LinkController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/LinkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="126">
+              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -113,7 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/public/css/home.css" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/built/bundle.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/home.html" />
@@ -164,6 +153,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/LinkController.java" />
       </list>
     </option>
   </component>
@@ -294,6 +284,17 @@
               <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
               <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="szalaynb" type="462c0819:PsiDirectoryNode" />
+              <item name="NudgeYourMind" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NudgeYourMind" type="b2602c69:ProjectViewProjectNode" />
@@ -519,7 +520,7 @@
       <workItem from="1528724711660" duration="4221000" />
       <workItem from="1528969974291" duration="581000" />
       <workItem from="1530022438057" duration="26946000" />
-      <workItem from="1530445388484" duration="37042000" />
+      <workItem from="1530445388484" duration="38604000" />
     </task>
     <servers />
   </component>
@@ -532,7 +533,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186555000" />
+    <option name="totallyTimeSpent" value="188117000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -646,13 +647,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/NudgeYourMindApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://25599247-376f-4ba3-8a54-0fe4661f1544/database/nym/schema/public/table/project">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -846,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/ToDoNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -930,13 +917,6 @@
             <element signature="e#880#881#0" expanded="true" />
             <element signature="e#907#908#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1046,11 +1026,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        <state relative-caret-position="789">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/ToDoAndProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Link.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
         </state>
       </provider>
     </entry>
