@@ -2,10 +2,8 @@ package com.szalaynb.NudgeYourMind.model;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class UserEntity {
@@ -17,6 +15,17 @@ public class UserEntity {
     private String username;
 
     private String password;
+
+    @OneToMany(mappedBy = "userEntity")
+    private List<Room> rooms;
+
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
 
     public UserEntity(String username, String password) {
         this.username = username;

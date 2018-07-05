@@ -42,11 +42,13 @@ public class InitializerBean {
 
             userService.saveUser(new UserEntity("bulent", "password"));
 
-            roomService.saveRoom(new Room("Workroom", Color.BLUE));
-            roomService.saveRoom(new Room("Community Space", Color.VIOLET));
-            roomService.saveRoom(new Room("Fun Room", Color.GREY));
-            roomService.saveRoom(new Room("Maid's Room", Color.GREEN));
-            roomService.saveRoom(new Room("Gym", Color.BLACK));
+            UserEntity bulent = userService.findById(1L);
+
+            roomService.saveRoom(new Room(bulent, "Workroom", Color.BLUE));
+            roomService.saveRoom(new Room(bulent, "Community Space", Color.VIOLET));
+            roomService.saveRoom(new Room(bulent, "Fun Room", Color.GREY));
+            roomService.saveRoom(new Room(bulent, "Maid's Room", Color.GREEN));
+            roomService.saveRoom(new Room(bulent, "Gym", Color.BLACK));
 
             Room workRoom = roomService.findById(1L);
             Room commSpace = roomService.findById(2L);

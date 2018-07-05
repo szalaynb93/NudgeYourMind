@@ -17,6 +17,10 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public UserEntity findById(Long id) {
+        return userRepository.findById(id).get();
+    }
+
     public void saveUser(UserEntity user) {
         userRepository.save(user);
     }
