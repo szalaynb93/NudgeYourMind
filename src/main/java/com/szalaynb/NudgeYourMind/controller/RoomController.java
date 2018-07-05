@@ -33,7 +33,7 @@ public class RoomController {
     public void saveRoom(@RequestParam Map<String, String> queryParameters) {
         String name = queryParameters.get("room_name");
         UserEntity user = userService.findUserByUsername(queryParameters.get("user"));
-        Color color = Color.valueOf(queryParameters.get("color"));
+        Color color = Color.valueOf(queryParameters.get("color").toUpperCase());
         Room room = new Room(user, name, color);
         roomService.saveRoom(room);
         System.out.println("\n room added \n");

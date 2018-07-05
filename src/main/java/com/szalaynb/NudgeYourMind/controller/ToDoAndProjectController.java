@@ -46,24 +46,7 @@ public class ToDoAndProjectController {
         return "redirect:/all";
     }*/
 
-    @PostMapping(value = "/add_todo")
-    public String saveToDo(@RequestParam Map<String, String> queryParameters) {
-        String name = queryParameters.get("todo_name");
-        boolean urgency = Boolean.getBoolean(queryParameters.get("todo_urgency"));
-        int duration = Integer.parseInt(queryParameters.get("todo_duration"));
-        Priority priority = Priority.valueOf(queryParameters.get("todo_priority"));
-        Project project = projectService.findById(Long.parseLong(queryParameters.get("todo_project")));
-//todo        ToDoNode toDoNode = new ToDoNode(name, urgency, duration, priority, project);
-//todo        toDoNodeService.saveToDoNode(toDoNode);
-        return "redirect:/all";
-    }
 
-    @PostMapping(value = "/delete_todo")
-    public @ResponseBody
-    void deleteToDo(@RequestParam Map<String, String> queryParameters) {
-        Long todoId = Long.parseLong(queryParameters.get("toDoId"), 10);
-        toDoNodeService.deleteToDoNode(todoId);
-    }
 
     @PostMapping(value = "/delete_project")
     @Transactional
