@@ -33,14 +33,15 @@ public class ToDoController {
         Urgency urgency = Urgency.valueOf(queryParameters.get("todo_urgency").toUpperCase());
         Priority priority = Priority.valueOf(queryParameters.get("todo_priority").toUpperCase());
         int duration = Integer.parseInt(queryParameters.get("todo_duration"));
-        Project project = projectService.findById(Long.parseLong(queryParameters.get("todo_project")));
+        Project project = projectService.findById(
+                Long.parseLong(queryParameters.get("todo_project"),10));
         toDoNodeService.saveToDoNode(new ToDoNode(name, urgency, duration, priority, project));
         System.out.println("\n ToDo saved \n");
     }
 
     @PostMapping(value = "/delete_todo")
     public @ResponseBody void deleteToDo(@RequestParam Map<String, String> queryParameters) {
-        Long todoId = Long.parseLong(queryParameters.get("toDoId"));
+        Long todoId = Long.parseLong(queryParameters.get("toDoId"),10);
         toDoNodeService.deleteToDoNode(todoId);
         System.out.println("\n ToDo deleted \n");
     }

@@ -29,14 +29,14 @@ public class LinkController {
     public void saveLink(@RequestParam Map<String, String> queryParameters) {
         String name = queryParameters.get("link_name");
         String url = queryParameters.get("link_url");
-        Room room = roomService.findById(Long.parseLong(queryParameters.get("room_id")));
+        Room room = roomService.findById(Long.parseLong(queryParameters.get("room_id"),10));
         linkService.savelink(new Link(name, url, room));
         System.out.println("\n link saved \n");
     }
 
     @PostMapping(value = "/delete_link")
     public @ResponseBody void deleteLink(@RequestParam Map<String, String> queryParameters) {
-        Long id = Long.parseLong(queryParameters.get("link_id"));
+        Long id = Long.parseLong(queryParameters.get("link_id"),10);
         linkService.deletelink(id);
         System.out.println("\n link deleted \n");
     }
