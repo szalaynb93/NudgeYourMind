@@ -73,7 +73,7 @@ public class InitializerBean {
             linkService.savelink(new Link("Eredmények", "www.eredmenyek.com", funRoom));
             linkService.savelink(new Link("F1 Világ", "www.f1vilag.com", funRoom));
             linkService.savelink(new Link("Google Keep", "www.keep.google.com", maidsRoom));
-            linkService.savelink(new Link("Naptár", "www.calendor.google.com", gym));
+            linkService.savelink(new Link("Naptár", "www.calendar.google.com", gym));
 
             Project yoga = projectService.findById(1L);
             Project cardio = projectService.findById(6L);

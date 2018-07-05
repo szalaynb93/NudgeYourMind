@@ -31,7 +31,7 @@ public class RoomService {
         roomRepository.save(room);
     }
 
-    public void deleteroom(Long id) {
+    public void deleteRoom(Long id) {
         roomRepository.deleteById(id);
     }
 
@@ -40,4 +40,7 @@ public class RoomService {
     }
 
 
+    public List<Room> findByUsername(String name) {
+        return roomRepository.findAllByUserUsername(name);
+    }
 }

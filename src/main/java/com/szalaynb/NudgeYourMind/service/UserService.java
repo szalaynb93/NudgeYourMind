@@ -28,4 +28,8 @@ public class UserService {
     public boolean isUserCountZero() {
         return userRepository.count() == 0;
     }
+
+    public UserEntity findUserByUsername(String name) {
+        return userRepository.findByUsername(name);
+    }
 }
