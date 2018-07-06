@@ -1,24 +1,24 @@
 package com.szalaynb.NudgeYourMind.model;
 
-import com.szalaynb.NudgeYourMind.model.Link;
-import com.szalaynb.NudgeYourMind.model.Project;
 import com.szalaynb.NudgeYourMind.model.enums.Color;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Room {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @ManyToOne
+    private UserEntity user;
     private String name;
     @OneToMany(mappedBy = "room")
     private List<Project> roomsProjectList;
     @OneToMany(mappedBy = "room")
     private List<Link> linkList;
+
     private Color themeColor;
     //    roadSignal is indicating the top priority stuff's color inside a room and
     //     on the outside of it
@@ -27,15 +27,29 @@ public class Room {
     public Room() {
     }
 
-    public Room(String name, Color themeColor) {
+    public Room(UserEntity user, String name, Color themeColor) {
 
         this.name = name;
         this.themeColor = themeColor;
+        this.user = user;
 
+
+    }
+
+    public UserEntity getUser() {
+        return user;
+    }
+
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 
     public List<Link> getLinkList() {
         return linkList;
+    }
+
+    public void setLinkList(List<Link> linkList) {
+        this.linkList = linkList;
     }
 
     public void appendLinkList(Link link) {
@@ -65,10 +79,6 @@ public class Room {
 
     public void setRoomsProjectList(List<Project> roomsProjectList) {
         this.roomsProjectList = roomsProjectList;
-    }
-
-    public void setLinkList(List<Link> linkList) {
-        this.linkList = linkList;
     }
 
     public Color getThemeColor() {

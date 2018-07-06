@@ -34,7 +34,7 @@ public class ToDoNodeService {
         toDoNodeRepository.deleteById(id);
     }
 
-    public void deleteToDoNodeByProjectId(Project project) {
+    public void deleteToDoNodeByProject(Project project) {
         toDoNodeRepository.deleteToDoNodesByProject(project);
     }
 
