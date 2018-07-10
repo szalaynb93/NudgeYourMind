@@ -66,10 +66,20 @@ public class RoomController {
     }
 
     @GetMapping(value = "/rooms")
-    public void renderRooms(Model model) {
-        List<Room> rooms = roomService.findByUsername(
-                SecurityContextHolder.getContext().getAuthentication().getName());
-        model.addAllAttributes(rooms);
+    public String renderRooms(Model model) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        List<Room> rooms = roomService.findByUsername(username);
+        model.addAttribute("rooms", rooms);
+        return "rooms";
     }
+
+    @GetMapping(value = "/room")
+    public String renderRoom(Model model) {
+        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+        List<Room> rooms = roomService.findByUsername(username);
+        model.addAttribute("projects", projectService.findAllByRoom(rooms.get(1)));
+        return "room";
+    }
+
 
 }

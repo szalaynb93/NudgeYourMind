@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}" lang="en">
+<head>
+    <title>Rooms</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div class="jumbotron main-content">
+        <h1>Rooms</h1>
+        <p>Here you can find the list of your rooms.</p>
+    </div>
+    <div class="container">
+        <div th:each="room:${rooms}">
+            <a th:href="@{/room}" th:text="${room.getName()}">room</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

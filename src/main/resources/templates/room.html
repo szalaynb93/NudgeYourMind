@@ -73,13 +73,15 @@
                 <td class="font-weight-bold bg-warning bg-info border border-dark">Urgent</td>
                 <td class="font-weight-bold bg-warning bg-info border border-dark">Duration(min)</td>
                 <td class="font-weight-bold bg-warning bg-info border border-dark">Priority</td>
+                <td class="font-weight-bold bg-warning bg-info border border-dark">Color</td>
                 <td class="font-weight-bold bg-warning bg-info border border-dark">Project</td>
             </tr>
             <tr th:each="todo: ${todolist}" th:id="todo+${todo.getId()}">
                 <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
-                <td class="border border-dark" th:text="${todo.isUrgent()}">urgency</td>
+                <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
                 <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                 <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
+                <td class="border border-dark" th:text="${todo.getColor()}">color</td>
                 <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
                 <td class="border border-dark"><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
@@ -95,16 +97,18 @@
             <table>
                 <tr>
                     <td class="font-weight-bold bg-warning border border-dark">ToDo</td>
-                    <td class="font-weight-bold bg-warning border border-dark">Urgent</td>
+                    <td class="font-weight-bold bg-warning border border-dark">Urgency</td>
                     <td class="font-weight-bold bg-warning border border-dark">Duration(min)</td>
                     <td class="font-weight-bold bg-warning border border-dark">Priority</td>
+                    <td class="font-weight-bold bg-warning border border-dark">Color</td>
                     <td class="font-weight-bold bg-warning border border-dark">Project</td>
                 </tr>
                 <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
                     <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
-                    <td class="border border-dark" th:text="${todo.isUrgent()}">urgency</td>
+                    <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
                     <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                     <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
+                    <td class="border border-dark" th:text="${todo.getColor()}">color</td>
                     <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
                     <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 

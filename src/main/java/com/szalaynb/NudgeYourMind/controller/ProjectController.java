@@ -52,11 +52,4 @@ public class ProjectController {
         System.out.println("\n project and related todos are deleted \n");
     }
 
-    @GetMapping(value = "/all")
-    public String renderAllToDo(Model model) {
-        model.addAttribute("todolist", toDoNodeService.findAll());
-        model.addAttribute("projects", projectService.findAll());
-        return "all";
-    }
-
 }

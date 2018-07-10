@@ -1,6 +1,7 @@
 package com.szalaynb.NudgeYourMind.service;
 
 import com.szalaynb.NudgeYourMind.model.Project;
+import com.szalaynb.NudgeYourMind.model.Room;
 import com.szalaynb.NudgeYourMind.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -21,8 +22,8 @@ public class ProjectService {
         this.projectRepository = projectRepository;
     }
 
-    public List<Project> findAll() {
-        return projectRepository.findAll();
+    public List<Project> findAllByRoom(Room room) {
+        return projectRepository.findAllByRoom(room);
     }
 
     public Project findById(Long id) {
