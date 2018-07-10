@@ -16,7 +16,7 @@ public class UserEntity {
 
     private String password;
 
-    @OneToMany(mappedBy = "userEntity")
+    @OneToMany(mappedBy = "user")
     private List<Room> rooms;
 
     public List<Room> getRooms() {

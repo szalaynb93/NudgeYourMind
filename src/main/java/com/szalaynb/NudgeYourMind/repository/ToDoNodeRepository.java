@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@RestResource
+@RepositoryRestResource
 public interface ToDoNodeRepository extends JpaRepository<ToDoNode, Long> {
 
     List<ToDoNode> findAllByColor(@Param("color")Color color);
