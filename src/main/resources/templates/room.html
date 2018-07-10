@@ -15,12 +15,7 @@
 
 </head>
 <body>
-<div id="navbar" class="container align-self-center sticky-top">
-    <div id="AllToDoBtn" class="btn btn-dark btn-lg">All ToDos</div>
-    <div id="AllProjectsBtn" class="btn btn-dark btn-lg">Projects</div>
-    <div id="ToDoPlannerBtn" class="btn btn-dark btn-lg">TODO Planner</div>
-    <div id="RageModeBtn" class="btn btn-dark btn-lg">Rage Mode</div>
-</div>
+
 <div id="addStuff" class="container align-self-center sticky-bottom">
     <button id="newToDoBtn" class="btn btn-lg btn-primary">New ToDo</button>
     <button id="closeToDoCreation" class="hide btn-lg btn btn-primary">Cancel</button>
@@ -33,8 +28,9 @@
 		<br>
 		<label for="todo_urgency_id">Is it urgent?</label>
 		    	<select id="todo_urgency_id" name="todo_urgency">
-				<option value="true">Yes</option>
-				<option value="false" selected>No</option>
+                    <option value="notreally">Not urgent</option>
+				    <option value="average" selected>Average</option>
+                    <option value="urgent">Urgent</option>
 		    	</select>
 		<br>
 		<label for="todo_duration_id">How many minutes is it about?</label>
@@ -42,10 +38,9 @@
 		<br>
 		<label for="todo_priority_id">How important is it?</label>
 			<select id="todo_priority_id" name="todo_priority">
-				<option value="P0" selected>No Priority</option>
-			        <option value="P1">Low Priority</option>
-			        <option value="P2">Medium Priority</option>
-			        <option value="P3">High Priority</option>
+				    <option value="P0" selected>Low Priority</option>
+			        <option value="P1">Medium Priority</option>
+			        <option value="P2">High Priority</option>
 			</select>
 		<br>
 		<label for="todo_project_id">Which project it belongs to?</label>
@@ -65,31 +60,7 @@
 		</form>
     </div>
 </div>
-<div id="allToDoDiv" class="container">
-    <div id="todoDiv" class="align-self-center">
-        <table>
-            <tr>
-                <td class="font-weight-bold bg-warning bg-info border border-dark">ToDo</td>
-                <td class="font-weight-bold bg-warning bg-info border border-dark">Urgent</td>
-                <td class="font-weight-bold bg-warning bg-info border border-dark">Duration(min)</td>
-                <td class="font-weight-bold bg-warning bg-info border border-dark">Priority</td>
-                <td class="font-weight-bold bg-warning bg-info border border-dark">Color</td>
-                <td class="font-weight-bold bg-warning bg-info border border-dark">Project</td>
-            </tr>
-            <tr th:each="todo: ${todolist}" th:id="todo+${todo.getId()}">
-                <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
-                <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
-                <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
-                <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
-                <td class="border border-dark" th:text="${todo.getColor()}">color</td>
-                <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
-                <td class="border border-dark"><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
-
-            </tr>
-        </table>
-    </div>
-</div>
-<div id="allProjectsDiv" class="container hide">
+<div id="allProjectsDiv" class="container">
     <div id="projectsDiv" class="align-self-center" th:each="project:${projects}">
         <div th:id="project+${project.getId()}">
             <h2 th:text="${project.getProjectName()}">Project x</h2>

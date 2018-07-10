@@ -34,18 +34,19 @@ public class ProjectController {
 
 
     @PostMapping(value = "/add_project")
-    public void saveProject(@RequestParam Map<String, String> queryParameters) {
+    public String saveProject(@RequestParam Map<String, String> queryParameters) {
         String name = queryParameters.get("project_name");
         Room room = roomService.findById(Long.parseLong(queryParameters.get("room_id"),10));
         projectService.saveProject(new Project(name, room));
         System.out.println("\n project added \n");
+        return "room";
     }
 
 
     @PostMapping(value = "/delete_project")
     @Transactional
     public @ResponseBody void deleteProject(@RequestParam Map<String, String> queryParameters) {
-        Long projectId = Long.parseLong(queryParameters.get("project_id"), 10);
+        Long projectId = Long.parseLong(queryParameters.get("projectId"), 10);
         Project project = projectService.findById(projectId);
         toDoNodeService.deleteToDoNodeByProject(project);
         projectService.deleteProject(projectId);

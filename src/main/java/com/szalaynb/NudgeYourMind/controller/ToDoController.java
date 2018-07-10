@@ -28,7 +28,7 @@ public class ToDoController {
     }
 
     @PostMapping(value = "/add_todo")
-    public void saveToDo(@RequestParam Map<String, String> queryParameters) {
+    public String saveToDo(@RequestParam Map<String, String> queryParameters) {
         String name = queryParameters.get("todo_name");
         Urgency urgency = Urgency.valueOf(queryParameters.get("todo_urgency").toUpperCase());
         Priority priority = Priority.valueOf(queryParameters.get("todo_priority").toUpperCase());
@@ -37,6 +37,7 @@ public class ToDoController {
                 Long.parseLong(queryParameters.get("todo_project"),10));
         toDoNodeService.saveToDoNode(new ToDoNode(name, urgency, duration, priority, project));
         System.out.println("\n ToDo saved \n");
+        return "room";
     }
 
     @PostMapping(value = "/delete_todo")

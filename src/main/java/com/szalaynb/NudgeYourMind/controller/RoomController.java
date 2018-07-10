@@ -77,7 +77,8 @@ public class RoomController {
     public String renderRoom(Model model) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         List<Room> rooms = roomService.findByUsername(username);
-        model.addAttribute("projects", projectService.findAllByRoom(rooms.get(1)));
+        List<Project> projects = projectService.findAllByRoom(rooms.get(0));
+        model.addAttribute("projects", projects);
         return "room";
     }
 
