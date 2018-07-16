@@ -11,9 +11,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -50,15 +48,15 @@ public class RoomController {
     @PostMapping(value = "/delete_room")
     @Transactional
     public void deleteRoom(@RequestParam Map<String, String> queryParameters) {
-        Long id = Long.parseLong(queryParameters.get("roomId"),10);
+        Long id = Long.parseLong(queryParameters.get("roomId"), 10);
         Room room = roomService.findById(id);
         List<Project> projects = room.getRoomsProjectList();
-        for(Project project : projects) {
+        for (Project project : projects) {
             toDoNodeService.deleteToDoNodeByProject(project);
             projectService.deleteProject(project.getId());
         }
         List<Link> links = room.getLinkList();
-        for(Link link : links) {
+        for (Link link : links) {
             linkService.deletelink(link.getId());
         }
         roomService.deleteRoom(id);
@@ -73,14 +71,25 @@ public class RoomController {
         return "rooms";
     }
 
-    @GetMapping(value = "/room")
-    public String renderRoom(Model model) {
+    @RequestMapping(value = "/room/{roomId}", method = RequestMethod.GET)
+    public String renderRoom(@PathVariable("roomId") String roomId, Model model) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        List<Room> rooms = roomService.findByUsername(username);
-        List<Project> projects = projectService.findAllByRoom(rooms.get(0));
-        model.addAttribute("projects", projects);
+        System.out.println("\n" + username);
+        UserEntity user = userService.findUserByUsername(username);
+        Room room = roomService.findByRoomIdAndUsername(Long.parseLong(roomId, 10), user);
+        System.out.println("\n" + room.getName());
+        model.addAttribute("projects", projectService.findAllByRoom(room));
         return "room";
     }
+
+//    @GetMapping(value = "/room")
+//    public String renderRoom(Model model) {
+//        String username = SecurityContextHolder.getContext().getAuthentication().getName();
+//        List<Room> rooms = roomService.findByUsername(username);
+//        List<Project> projects = projectService.findAllByRoom(rooms.get(0));
+//        model.addAttribute("projects", projects);
+//        return "room";
+//    }
 
 
 }

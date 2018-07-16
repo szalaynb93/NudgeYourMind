@@ -1,6 +1,7 @@
 package com.szalaynb.NudgeYourMind.service;
 
 import com.szalaynb.NudgeYourMind.model.Room;
+import com.szalaynb.NudgeYourMind.model.UserEntity;
 import com.szalaynb.NudgeYourMind.repository.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -42,5 +43,9 @@ public class RoomService {
 
     public List<Room> findByUsername(String name) {
         return roomRepository.findAllByUserUsername(name);
+    }
+
+    public Room findByRoomIdAndUsername(long id, UserEntity user) {
+        return roomRepository.findRoomByIdAndUser(id, user);
     }
 }
