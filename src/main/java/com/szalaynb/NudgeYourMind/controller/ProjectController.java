@@ -9,11 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
@@ -34,12 +32,13 @@ public class ProjectController {
 
 
     @PostMapping(value = "/add_project")
-    public String saveProject(@RequestParam Map<String, String> queryParameters) {
+    public String saveProject(@RequestParam Map<String, String> queryParameters, HttpSession session) {
         String name = queryParameters.get("project_name");
-        Room room = roomService.findById(Long.parseLong(queryParameters.get("room_id"),10));
+        Long roomId = Long.parseLong(session.getAttribute("room_id").toString(), 10);
+        Room room = roomService.findById(roomId);
         projectService.saveProject(new Project(name, room));
         System.out.println("\n project added \n");
-        return "room";
+        return "redirect:/room/1";
     }
 
 

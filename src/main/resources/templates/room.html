@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
 <head>
 
     <meta charset="UTF-8"/>
@@ -15,80 +16,86 @@
 
 </head>
 <body>
-
-<div id="addStuff" class="container align-self-center sticky-bottom">
-    <button id="newToDoBtn" class="btn btn-lg btn-primary">New ToDo</button>
-    <button id="closeToDoCreation" class="hide btn-lg btn btn-primary">Cancel</button>
-    <button id="newProjectBtn" class="btn btn-lg btn-primary">New Project</button>
-    <button id="closeProjectCreation" class="hide btn btn-lg btn-primary">Cancel</button>
-    <div id="newToDoDiv" class="hide">
-	    <form action="/add_todo" method="post">
-		<label for="todo_name_id">What you want to do?</label>
-			<input id="todo_name_id" type="text" name="todo_name" required>
-		<br>
-		<label for="todo_urgency_id">Is it urgent?</label>
-		    	<select id="todo_urgency_id" name="todo_urgency">
-                    <option value="notreally">Not urgent</option>
-				    <option value="average" selected>Average</option>
-                    <option value="urgent">Urgent</option>
-		    	</select>
-		<br>
-		<label for="todo_duration_id">How many minutes is it about?</label>
-			<input id="todo_duration_id" type="number" name="todo_duration" required>
-		<br>
-		<label for="todo_priority_id">How important is it?</label>
-			<select id="todo_priority_id" name="todo_priority">
-				    <option value="P0" selected>Low Priority</option>
-			        <option value="P1">Medium Priority</option>
-			        <option value="P2">High Priority</option>
-			</select>
-		<br>
-		<label for="todo_project_id">Which project it belongs to?</label>
-			<select id="todo_project_id"  name="todo_project">
-			        <option th:each="project:${projects}" th:value="${project.id}" th:text="${project.projectName}"></option>
-			</select>
-		<br>
-		<button class="btn btn-success" type="submit">Add ToDo</button>
-	    </form>	
+<div layout:fragment="content">
+    <div class="jumbotron main-content">
+        <h1 th:text="${room.getName()}">Room_name</h1>
+        <p>Here are your projects, mate!</p>
     </div>
-    <div id="newProjectDiv" class="hide">
-		<form action="/add_project" method="post">
-		    <label for="project_name_id">What is your new project?</label>
-		    	<input type="text" id="project_name_id" name="project_name" required>
-		    <br>
-		    <button class="btn btn-success" type="submit">Add Project</button>
-		</form>
-    </div>
-</div>
-<div id="allProjectsDiv" class="container">
-    <div id="projectsDiv" class="align-self-center" th:each="project:${projects}">
-        <div th:id="project+${project.getId()}">
-            <h2 th:text="${project.getProjectName()}">Project x</h2>
-            <button class="btn-danger btn" th:onclick="'areYouSureProject(' + ${project.getId()} + ')'">X</button>
-            <table>
-                <tr>
-                    <td class="font-weight-bold bg-warning border border-dark">ToDo</td>
-                    <td class="font-weight-bold bg-warning border border-dark">Urgency</td>
-                    <td class="font-weight-bold bg-warning border border-dark">Duration(min)</td>
-                    <td class="font-weight-bold bg-warning border border-dark">Priority</td>
-                    <td class="font-weight-bold bg-warning border border-dark">Color</td>
-                    <td class="font-weight-bold bg-warning border border-dark">Project</td>
-                </tr>
-                <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
-                    <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
-                    <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
-                    <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
-                    <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
-                    <td class="border border-dark" th:text="${todo.getColor()}">color</td>
-                    <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
-                    <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
-
-                </tr>
-            </table>
+    <div class="container">
+        <div id="addStuff" class="container align-self-center sticky-bottom">
+            <button id="newToDoBtn" class="btn btn-lg btn-primary">New ToDo</button>
+            <button id="closeToDoCreation" class="hide btn-lg btn btn-primary">Cancel</button>
+            <button id="newProjectBtn" class="btn btn-lg btn-primary">New Project</button>
+            <button id="closeProjectCreation" class="hide btn btn-lg btn-primary">Cancel</button>
+            <div id="newToDoDiv" class="hide">
+                <form action="/add_todo" method="post">
+                    <label for="todo_name_id">What you want to do?</label>
+                    <input id="todo_name_id" type="text" name="todo_name" required>
+                    <br>
+                    <label for="todo_urgency_id">Is it urgent?</label>
+                    <select id="todo_urgency_id" name="todo_urgency">
+                        <option value="notreally">Not urgent</option>
+                        <option value="average" selected>Average</option>
+                        <option value="urgent">Urgent</option>
+                    </select>
+                    <br>
+                    <label for="todo_duration_id">How many minutes is it about?</label>
+                    <input id="todo_duration_id" type="number" name="todo_duration" required>
+                    <br>
+                    <label for="todo_priority_id">How important is it?</label>
+                    <select id="todo_priority_id" name="todo_priority">
+                        <option value="P0" selected>Low Priority</option>
+                        <option value="P1">Medium Priority</option>
+                        <option value="P2">High Priority</option>
+                    </select>
+                    <br>
+                    <label for="todo_project_id">Which project it belongs to?</label>
+                    <select id="todo_project_id"  name="todo_project">
+                        <option th:each="project:${projects}" th:value="${project.id}" th:text="${project.projectName}"></option>
+                    </select>
+                    <br>
+                    <button class="btn btn-success" type="submit">Add ToDo</button>
+                </form>
+            </div>
+            <div id="newProjectDiv" class="hide">
+                <form action="/add_project" method="post">
+                    <label for="project_name_id">What is your new project?</label>
+                    <input type="text" id="project_name_id" name="project_name" required>
+                    <br>
+                    <button class="btn btn-success" type="submit">Add Project</button>
+                </form>
+            </div>
         </div>
+        <div id="allProjectsDiv" class="container">
+            <div id="projectsDiv" class="align-self-center" th:each="project:${projects}">
+                <div th:id="project+${project.getId()}">
+                    <h2 th:text="${project.getProjectName()}">Project x</h2>
+                    <button class="btn-danger btn" th:onclick="'areYouSureProject(' + ${project.getId()} + ')'">X</button>
+                    <table>
+                        <tr>
+                            <td class="font-weight-bold bg-warning border border-dark">ToDo</td>
+                            <td class="font-weight-bold bg-warning border border-dark">Urgency</td>
+                            <td class="font-weight-bold bg-warning border border-dark">Duration(min)</td>
+                            <td class="font-weight-bold bg-warning border border-dark">Priority</td>
+                            <td class="font-weight-bold bg-warning border border-dark">Color</td>
+                            <td class="font-weight-bold bg-warning border border-dark">Project</td>
+                        </tr>
+                        <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
+                            <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
+                            <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
+                            <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
+                            <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
+                            <td class="border border-dark" th:text="${todo.getColor()}">color</td>
+                            <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
+                            <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
 </html>

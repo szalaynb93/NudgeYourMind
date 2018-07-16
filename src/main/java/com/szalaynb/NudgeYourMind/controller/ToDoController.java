@@ -5,6 +5,7 @@ import com.szalaynb.NudgeYourMind.model.ToDoNode;
 import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.model.enums.Urgency;
 import com.szalaynb.NudgeYourMind.service.ProjectService;
+import com.szalaynb.NudgeYourMind.service.RoomService;
 import com.szalaynb.NudgeYourMind.service.ToDoNodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.net.MalformedURLException;
 import java.util.Map;
 
 @Controller
@@ -21,14 +23,17 @@ public class ToDoController {
 
     private final ProjectService projectService;
 
+    private final RoomService roomService;
+
     @Autowired
-    public ToDoController(ToDoNodeService toDoNodeService, ProjectService projectService) {
+    public ToDoController(ToDoNodeService toDoNodeService, ProjectService projectService, RoomService roomService) {
         this.toDoNodeService = toDoNodeService;
         this.projectService = projectService;
+        this.roomService = roomService;
     }
 
     @PostMapping(value = "/add_todo")
-    public String saveToDo(@RequestParam Map<String, String> queryParameters) {
+    public String saveToDo(@RequestParam Map<String, String> queryParameters) throws MalformedURLException {
         String name = queryParameters.get("todo_name");
         Urgency urgency = Urgency.valueOf(queryParameters.get("todo_urgency").toUpperCase());
         Priority priority = Priority.valueOf(queryParameters.get("todo_priority").toUpperCase());
@@ -37,7 +42,8 @@ public class ToDoController {
                 Long.parseLong(queryParameters.get("todo_project"),10));
         toDoNodeService.saveToDoNode(new ToDoNode(name, urgency, duration, priority, project));
         System.out.println("\n ToDo saved \n");
-        return "room";
+        Long roomId = project.getRoom().getId();
+        return "redirect:/room/"+roomId;
     }
 
     @PostMapping(value = "/delete_todo")

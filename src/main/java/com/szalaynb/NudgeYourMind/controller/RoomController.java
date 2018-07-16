@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -72,11 +73,14 @@ public class RoomController {
     }
 
     @RequestMapping(value = "/room/{roomId}", method = RequestMethod.GET)
-    public String renderRoom(@PathVariable("roomId") String roomId, Model model) {
+    public String renderRoom(@PathVariable("roomId") String roomId, Model model, HttpSession session) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
         UserEntity user = userService.findUserByUsername(username);
         Room room = roomService.findByRoomIdAndUsername(Long.parseLong(roomId, 10), user);
-        model.addAttribute("projects", projectService.findAllByRoom(room));
+        List<Project> projects = projectService.findAllByRoom(room);
+        model.addAttribute("projects", projects);
+        model.addAttribute("room", room);
+        session.setAttribute("room_id", roomId);
         return "room";
     }
 
