@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6e1402c-f3ab-4c7e-92c1-e2db5b075cdb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/repository/RoomRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/rooms.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/rooms.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,13 +81,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoomController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            <state relative-caret-position="425">
+              <caret line="82" column="1" lean-forward="true" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+              <folding>
+                <element signature="n#build#0;n#project#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -213,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/logout.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/error.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login_page.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/config/ApplicationSecurityConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/model/Room.java" />
@@ -241,6 +249,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/service/RoomService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/rooms.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -432,7 +441,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -583,7 +592,7 @@
       <workItem from="1530022438057" duration="26946000" />
       <workItem from="1530445388484" duration="41271000" />
       <workItem from="1531223856348" duration="2673000" />
-      <workItem from="1531725704526" duration="4887000" />
+      <workItem from="1531725704526" duration="5932000" />
     </task>
     <servers />
   </component>
@@ -596,7 +605,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203915000" />
+    <option name="totallyTimeSpent" value="204960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,10 +638,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.4972506" visible="true" weight="0.38423154" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.4972506" visible="true" weight="0.38423154" />
       <window_info anchor="bottom" id="Spring" order="3" weight="0.14610389" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32900432" />
-      <window_info content_ui="combo" id="Project" order="7" sideWeight="0.49763033" visible="true" weight="0.20597652" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" sideWeight="0.49763033" visible="true" weight="0.20597652" />
       <window_info anchor="bottom" id="Problems" order="15" />
       <window_info anchor="right" id="Bean Validation" order="4" />
       <window_info id="Web" order="4" sideWeight="0.50236964" side_tool="true" weight="0.27022782" />
@@ -728,16 +737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="n#build#0;n#project#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,10 +1079,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/szalaynb/NudgeYourMind/controller/RoomController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="61" column="35" lean-forward="true" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+        <state relative-caret-position="425">
+          <caret line="82" column="1" lean-forward="true" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -1091,6 +1100,17 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />

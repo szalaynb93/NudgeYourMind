@@ -74,22 +74,10 @@ public class RoomController {
     @RequestMapping(value = "/room/{roomId}", method = RequestMethod.GET)
     public String renderRoom(@PathVariable("roomId") String roomId, Model model) {
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
-        System.out.println("\n" + username);
         UserEntity user = userService.findUserByUsername(username);
         Room room = roomService.findByRoomIdAndUsername(Long.parseLong(roomId, 10), user);
-        System.out.println("\n" + room.getName());
         model.addAttribute("projects", projectService.findAllByRoom(room));
         return "room";
     }
-
-//    @GetMapping(value = "/room")
-//    public String renderRoom(Model model) {
-//        String username = SecurityContextHolder.getContext().getAuthentication().getName();
-//        List<Room> rooms = roomService.findByUsername(username);
-//        List<Project> projects = projectService.findAllByRoom(rooms.get(0));
-//        model.addAttribute("projects", projects);
-//        return "room";
-//    }
-
 
 }
