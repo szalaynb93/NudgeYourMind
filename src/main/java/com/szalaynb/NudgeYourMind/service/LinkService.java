@@ -1,6 +1,8 @@
 package com.szalaynb.NudgeYourMind.service;
 
 import com.szalaynb.NudgeYourMind.model.Link;
+import com.szalaynb.NudgeYourMind.model.Project;
+import com.szalaynb.NudgeYourMind.model.Room;
 import com.szalaynb.NudgeYourMind.repository.LinkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
@@ -27,11 +29,11 @@ public class LinkService {
         return linkRepository.findById(id).get();
     }
 
-    public void savelink(Link link) {
+    public void saveLink(Link link) {
         linkRepository.save(link);
     }
 
-    public void deletelink(Long id) {
+    public void deleteLink(Long id) {
         linkRepository.deleteById(id);
     }
 
@@ -40,4 +42,7 @@ public class LinkService {
     }
 
 
+    public List<Link> findAllByRoom(Room room) {
+        return linkRepository.findAllByRoom(room);
+    }
 }

@@ -58,7 +58,7 @@ public class RoomController {
         }
         List<Link> links = room.getLinkList();
         for (Link link : links) {
-            linkService.deletelink(link.getId());
+            linkService.deleteLink(link.getId());
         }
         roomService.deleteRoom(id);
         System.out.println("\n room" + id + " and its content is deleted \n");
@@ -78,7 +78,9 @@ public class RoomController {
         UserEntity user = userService.findUserByUsername(username);
         Room room = roomService.findByRoomIdAndUsername(Long.parseLong(roomId, 10), user);
         List<Project> projects = projectService.findAllByRoom(room);
+        List<Link> links = linkService.findAllByRoom(room);
         model.addAttribute("projects", projects);
+        model.addAttribute("links", links);
         model.addAttribute("room", room);
         session.setAttribute("room_id", roomId);
         return "room";

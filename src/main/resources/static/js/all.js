@@ -42,26 +42,31 @@ CNPB.onclick = unrevealNewProject;
 
 
 
-const ATDB = document.querySelector("#AllToDoBtn");
-const APB = document.querySelector("#AllProjectsBtn");
-const ATDDIV = document.querySelector("#allToDoDiv");
-const APDIV = document.querySelector("#allProjectsDiv");
 
 
-function todoView() {
-    APDIV.classList.add("hide");
-    ATDDIV.classList.remove("hide");
+
+const NLB = document.querySelector("#newLinkBtn");
+const CNLB = document.querySelector("#closeLinkCreation");
+const NLDIV = document.querySelector("#newLinkDiv");
+
+function revealNewLink() {
+    NLB.classList.add("hide");
+    CNLB.classList.remove("hide");
+    NLDIV.classList.remove("hide");
 }
 
-function projectView() {
-    APDIV.classList.remove("hide");
-    ATDDIV.classList.add("hide");
+function unrevealNewLink() {
+    NLB.classList.remove("hide");
+    CNLB.classList.add("hide");
+    NLDIV.classList.add("hide");
 }
 
-projectView();
+NLB.onclick = revealNewLink;
+CNLB.onclick = unrevealNewLink;
 
-ATDB.onclick = todoView;
-APB.onclick = projectView;
+
+
+
 
 function areYouSureToDo(id) {
     let ok = confirm("Are you sure to delete this todo?");
@@ -76,6 +81,18 @@ function areYouSureProject(id) {
         deleteProject(id)
     }
 }
+
+function areYouSureLink(id) {
+    let ok = confirm("Are you sure to delete this Link?");
+    if (ok === true) {
+        console.log("kutya");
+        deleteLink(id)
+    }
+}
+
+
+
+
 
 function deleteToDo(id) {
     $.ajax({
@@ -105,6 +122,21 @@ function deleteProject(id) {
         },
         error: function (data) {
             console.log("Project deletion ERROR. Data: " + data.responseText);
+        }
+    })
+}
+
+function deleteLink(id) {
+    $.ajax({
+        url: '/delete_link',
+        type: 'POST',
+        data: {"linkId" : id},
+        success: function (data) {
+            $("#link" + id).remove();
+            console.log("Link Deleted: " + data.responseText);
+        },
+        error: function (data) {
+            console.log("Link deletion ERROR. Data: " + data.responseText);
         }
     })
 }

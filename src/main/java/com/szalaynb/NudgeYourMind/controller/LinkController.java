@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller
@@ -26,18 +27,20 @@ public class LinkController {
     }
 
     @PostMapping(value = "/add_link")
-    public void saveLink(@RequestParam Map<String, String> queryParameters) {
+    public String saveLink(@RequestParam Map<String, String> queryParameters, HttpSession session) {
         String name = queryParameters.get("link_name");
         String url = queryParameters.get("link_url");
-        Room room = roomService.findById(Long.parseLong(queryParameters.get("room_id"),10));
-        linkService.savelink(new Link(name, url, room));
+        Long roomId = Long.parseLong(session.getAttribute("room_id").toString(), 10);
+        Room room = roomService.findById(roomId);
+        linkService.saveLink(new Link(name, url, room));
         System.out.println("\n link saved \n");
+        return "redirect:/room/" + roomId;
     }
 
     @PostMapping(value = "/delete_link")
     public @ResponseBody void deleteLink(@RequestParam Map<String, String> queryParameters) {
-        Long id = Long.parseLong(queryParameters.get("link_id"),10);
-        linkService.deletelink(id);
+        Long linkId = Long.parseLong(queryParameters.get("linkId"),10);
+        linkService.deleteLink(linkId);
         System.out.println("\n link deleted \n");
     }
 

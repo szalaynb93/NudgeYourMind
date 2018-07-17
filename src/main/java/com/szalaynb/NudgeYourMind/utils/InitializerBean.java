@@ -6,7 +6,6 @@ import com.szalaynb.NudgeYourMind.model.enums.Priority;
 import com.szalaynb.NudgeYourMind.model.enums.Urgency;
 import com.szalaynb.NudgeYourMind.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -68,12 +67,12 @@ public class InitializerBean {
             projectService.saveProject(new Project("tidiness", maidsRoom));
             projectService.saveProject(new Project("Functionality and Simpliness", maidsRoom));
 
-            linkService.savelink(new Link("TomatoTimer", "www.tomato-timer.com", workRoom));
-            linkService.savelink(new Link("Facebook", "www.facebook.com", commSpace));
-            linkService.savelink(new Link("Eredmények", "www.eredmenyek.com", funRoom));
-            linkService.savelink(new Link("F1 Világ", "www.f1vilag.com", funRoom));
-            linkService.savelink(new Link("Google Keep", "www.keep.google.com", maidsRoom));
-            linkService.savelink(new Link("Naptár", "www.calendar.google.com", gym));
+            linkService.saveLink(new Link("TomatoTimer", "www.tomato-timer.com", workRoom));
+            linkService.saveLink(new Link("Facebook", "www.facebook.com", commSpace));
+            linkService.saveLink(new Link("Eredmények", "www.eredmenyek.com", funRoom));
+            linkService.saveLink(new Link("F1 Világ", "www.f1vilag.com", funRoom));
+            linkService.saveLink(new Link("Google Keep", "www.keep.google.com", maidsRoom));
+            linkService.saveLink(new Link("Naptár", "www.calendar.google.com", gym));
 
             Project yoga = projectService.findById(1L);
             Project cardio = projectService.findById(6L);

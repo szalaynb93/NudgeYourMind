@@ -41,12 +41,12 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/", "/index", "/register", "/js/*", "/css/*")
-                .permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/", "/index", "/registration", "/register", "/js/*", "/css/*").permitAll()
+                .antMatchers("/add_link", "/delete_link", "/add_project", "/delete_project",
+                        "/add_room", "/delete_room", "/rooms", "/room/*", "/add_todo", "/delete_todo").authenticated()
+                .anyRequest().denyAll()
                 .and()
-                .formLogin()
-                .loginPage("/login").permitAll()
+                .formLogin().loginPage("/login").permitAll()
                 .and()
                 .logout().invalidateHttpSession(true)
                 .clearAuthentication(true)

@@ -23,13 +23,10 @@ public class ToDoController {
 
     private final ProjectService projectService;
 
-    private final RoomService roomService;
-
     @Autowired
-    public ToDoController(ToDoNodeService toDoNodeService, ProjectService projectService, RoomService roomService) {
+    public ToDoController(ToDoNodeService toDoNodeService, ProjectService projectService) {
         this.toDoNodeService = toDoNodeService;
         this.projectService = projectService;
-        this.roomService = roomService;
     }
 
     @PostMapping(value = "/add_todo")

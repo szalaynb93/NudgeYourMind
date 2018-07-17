@@ -38,7 +38,7 @@ public class ProjectController {
         Room room = roomService.findById(roomId);
         projectService.saveProject(new Project(name, room));
         System.out.println("\n project added \n");
-        return "redirect:/room/1";
+        return "redirect:/room/" + roomId;
     }
 
 

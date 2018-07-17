@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}" lang="en"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout ">
 <head>
-    <meta charset="UTF-8">
     <title>Registration</title>
 </head>
 <body>
-    <div id="registration_form">
-        <form action="/register" method="post">
-            <label for="username">Select a username:</label>
-            <input id="username" type="text" name="username" required>
-            <br>
-            <label for="password">Select a password:</label>
-            <input id="password" type="password" name="password" required>
-            <br>
-            <button class="btn btn-success" type="submit">Register</button>
+
+<div layout:fragment="content">
+    <div class="container main-content">
+        <h3>Registration Page</h3>
+        <form th:action="@{/register}" method="post">
+            <div th:if="${param.error}">
+                <div class="alert alert-danger">
+                    Invalid username or password.
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="username" class="col-sm-2 col-form-label">Select a username!</label>
+                <div class="col-sm-6">
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username"
+                           autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="password" class="col-sm-2 col-form-label">Select a password!</label>
+                <div class="col-sm-6">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                           autofocus="autofocus">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </div>
         </form>
     </div>
+</div>
+
 </body>
 </html>
+
