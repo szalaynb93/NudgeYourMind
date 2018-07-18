@@ -85,7 +85,6 @@ function areYouSureProject(id) {
 function areYouSureLink(id) {
     let ok = confirm("Are you sure to delete this Link?");
     if (ok === true) {
-        console.log("kutya");
         deleteLink(id)
     }
 }

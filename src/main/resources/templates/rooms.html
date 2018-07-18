@@ -11,8 +11,8 @@
         <p>Here you can find the list of your rooms.</p>
     </div>
     <div class="container">
-        <div th:each="room:${rooms}">
-            <a th:href="'room/'+${room.getId()}" th:text="${room.getName()}">room</a>
+        <div class="menu" th:each="room:${rooms}">
+            <a class="menu-item" th:href="'room/'+${room.getId()}" th:text="${room.getName()}">room</a>
         </div>
     </div>
 </div>

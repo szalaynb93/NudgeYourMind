@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/all.css">
     <script src="/js/all.js" defer></script>
@@ -79,7 +81,7 @@
                                         <td class="font-weight-bold bg-secondary border border-dark">Urgency</td>
                                         <td class="font-weight-bold bg-secondary border border-dark">Duration(min)</td>
                                         <td class="font-weight-bold bg-secondary border border-dark">Priority</td>
-                                        <td class="font-weight-bold bg-secondary border border-dark">Color</td>
+                                        <td class="font-weight-bold bg-secondary border border-dark">Col</td>
                                         <td class="font-weight-bold bg-secondary border border-dark">Project</td>
                                     </tr>
                                     <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
@@ -87,7 +89,9 @@
                                         <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
                                         <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                                         <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
-                                        <td class="border border-dark" th:text="${todo.getColor()}">color</td>
+                                        <td class="border border-dark">
+                                            <i class="fa fa-circle" style="text-align: center;" th:style="'color:'+${todo.getColor()}+';'"></i>
+                                        </td>
                                         <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
                                         <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
 
