@@ -85,7 +85,7 @@ function areYouSureProject(id) {
 function areYouSureLink(id) {
     let ok = confirm("Are you sure to delete this Link?");
     if (ok === true) {
-        deleteLink(id)
+        deleteLink(id);
     }
 }
 
@@ -100,8 +100,6 @@ function deleteToDo(id) {
         data: {"toDoId" : id},
         success: function (data) {
             $("#todo" + id).remove();
-            $("#ptodo" + id).remove();
-
             console.log("ToDo Deleted: " + data.responseText);
         },
         error: function (data) {

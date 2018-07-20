@@ -5,3 +5,7 @@
 h2 {
     display: inline-block;
 }
+
+.center {
+    text-align: center;
+}

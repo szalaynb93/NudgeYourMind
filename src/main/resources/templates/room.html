@@ -14,7 +14,7 @@
           integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/all.css">
-    <script src="/js/all.js" defer></script>
+    <script src="/js/room.js" defer></script>
 
 </head>
 <body>
@@ -25,7 +25,9 @@
     </div>
         <div class="container">
             <div class="row">
-                <div>
+                <div class="bg-light">
+                    <h2>Projects</h2>
+                    <br>
                     <div id="addStuff" class="container align-self-center sticky-bottom">
                         <button id="newToDoBtn" class="btn btn-lg btn-primary">New ToDo</button>
                         <button id="closeToDoCreation" class="hide btn-lg btn btn-primary">Cancel</button>
@@ -70,10 +72,12 @@
                             </form>
                         </div>
                     </div>
+                    <br>
                     <div id="allProjectsDiv" class="container">
                         <div id="projectsDiv" class="align-self-center" th:each="project:${projects}">
                             <div th:id="project+${project.getId()}">
-                                <h2 th:text="${project.getProjectName()}">Project x</h2>
+                                <br>
+                                <h4 th:text="${project.getProjectName()}">Project x</h4>
                                 <button class="btn-danger btn" th:onclick="'areYouSureProject(' + ${project.getId()} + ')'">X</button>
                                 <table>
                                     <tr>
@@ -81,20 +85,19 @@
                                         <td class="font-weight-bold bg-secondary border border-dark">Urgency</td>
                                         <td class="font-weight-bold bg-secondary border border-dark">Duration(min)</td>
                                         <td class="font-weight-bold bg-secondary border border-dark">Priority</td>
-                                        <td class="font-weight-bold bg-secondary border border-dark">Col</td>
+                                        <td class="font-weight-bold bg-secondary border border-dark">Color</td>
                                         <td class="font-weight-bold bg-secondary border border-dark">Project</td>
                                     </tr>
-                                    <tr th:each="todo: ${project.getToDoNodeList()}" th:id="ptodo+${todo.getId()}">
+                                    <tr th:each="todo: ${project.getToDoNodeList()}" th:id="todo+${todo.getId()}">
                                         <td class="border font-weight-bold border-dark" th:text="${todo.getToDoName()}">thing 1</td>
                                         <td class="border border-dark" th:text="${todo.getUrgency()}">urgency</td>
                                         <td class="border border-dark" th:text="${todo.getDuration()}">10</td>
                                         <td class="border border-dark" th:text="${todo.getPriority()}">P0</td>
                                         <td class="border border-dark">
-                                            <i class="fa fa-circle" style="text-align: center;" th:style="'color:'+${todo.getColor()}+';'"></i>
+                                            <i class="center fa fa-cogs fa-2x" style="text-align: center;" th:style="'color:'+${todo.getColor()}+';'"></i>
                                         </td>
                                         <td class="border border-dark" th:text="${todo.getProject().getProjectName()}">project1</td>
-                                        <td><button class="btn-danger btn deletion" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
-
+                                        <td><button class="btn btn-danger" th:onclick="'areYouSureToDo(' + ${todo.getId()} + ')'">X</button></td>
                                     </tr>
                                 </table>
                             </div>
@@ -103,6 +106,11 @@
                     </div>
                 </div>
                 <div>
+                    <br>
+                </div>
+                <div class="bg-light">
+                    <h2>Links</h2>
+                    <br>
                     <div id="addLink" class="container align-self-center sticky-bottom">
                         <button id="newLinkBtn" class="btn btn-lg btn-primary">New Link</button>
                         <button id="closeLinkCreation" class="hide btn-lg btn btn-primary">Cancel</button>
@@ -118,7 +126,7 @@
                             </form>
                         </div>
                     </div>
-                    <h2>List of Links</h2>
+                    <br>
                     <div id="allLinksDiv" class="container">
                         <div id="linksDiv" class="align-self-center" th:each="link:${links}">
                             <div th:id="link+${link.getId()}">
